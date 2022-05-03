@@ -25,8 +25,8 @@ import ProductItem from '../components/ProductItem.vue'
 export default {
     name:"ListPage",
     components:{
-        SearchInput,
-        ProductItem
+        ProductItem,
+        SearchInput
     }
 }
 </script>
