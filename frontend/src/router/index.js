@@ -1,23 +1,45 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import MainHome from "../views/MainHome.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
+  //*** 메인 ***
   {
     path: "/",
     name: "home",
-    component: HomeView,
+    component: MainHome,
   },
+
+  //**** 상품 product ***
+  //상품리스트
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    path: "/list",
+    name: "list",
+    component: () => import("../views/product/ListView.vue"),
+  },
+  //상품상세
+  {
+    path: "/list/detail",
+    name: "detail",
+    component: () => import("../views/product/DetailView.vue"),
+  },
+
+  // *** login  ***
+  //회원가입
+  {
+    path: "/join",
+    name: "join",
+    component: () => import("../views/login/joinView.vue"),
+  },
+
+  // *** 시세  ***
+  //시세
+  {
+    path: "/price",
+    name: "price",
+    component: () => import("../views/price/PriceList.vue"),
   },
 ];
 
