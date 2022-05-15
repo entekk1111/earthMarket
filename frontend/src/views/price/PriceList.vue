@@ -1,5 +1,5 @@
 <template>
-  <div>시세페이지</div>
+  <div>시세</div>
 </template>
 
 <script>

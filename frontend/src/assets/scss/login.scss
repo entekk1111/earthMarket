@@ -1,0 +1,97 @@
+
+@import "_setting.scss";
+
+/*** common for login ***/
+
+//layout
+html, body, #container,.grab,.login-wrap {height: 100%;}
+.layout { max-width: 442px;}
+.header {border-bottom: 0;}
+
+//txt
+.tit-style {
+    font-family: 'kangwon'; font-size: 24px; @include display_mode(block);  color: #000; text-align: center;
+    &.big {font-size: 36px;}
+}
+.txt-explain {color: $dark03; font-size: 14px; margin-bottom: 15px;}
+
+//input-wrap
+.label-tit {color: $dark01; font-size: 18px; font-weight: 600; display: block;margin-bottom: 16px;}
+.input-wrap {
+    display: flex;
+    > .btn {margin-left: 12px; width: 105px; font-size: 18px;}
+}
+
+//sns-group
+.sns-group {
+        margin-top: 63px;text-align: center;
+        ul {
+            margin-top: 27px;
+            li:not(:first-child) {margin-left: 24px;}
+            .ico {@include display_mode; width: 48px; height: 48px; border-radius: $circle_radius; background-image: url(../image/ico-sns.png);}
+            .ico02{background-position: 48px 0;}
+        }
+}
+
+
+/***login-wrap  로그인 ***/
+.login-wrap{
+    padding-top: 229px;
+    
+    //logo
+    .logo {margin: 0 auto; margin-bottom: 40px;}
+    
+    //form-group
+    .form-group {
+        ul>li {margin-bottom: 24px; }
+        .btn { font-size: 18px;} 
+    }
+    //find-group
+    .find-group {
+        text-align: center; margin-top: 56px;
+        & >* {@include display_mode;}
+        li {
+            position: relative;
+            &:not(:first-child):after { content: ""; display: block; width: 1px; height: 27px; background: $dark04; position: absolute; left: -18px; top: 0;}
+            &:not(:first-child) {margin-left: 33px;}
+            a {color: $dark04;
+            &:hover {text-decoration: underline; }
+            }
+        }
+    }
+
+}
+
+
+
+/*** join 회원가입 ***/
+.join-wrap {
+    padding-bottom: 170px;
+    //form-group
+    .form-group {
+        border-top: 1px solid $light03;  padding-top: 47px; margin-top: 40px;
+        > li {
+            margin-bottom: 31px;
+            .pwd-auth{
+                background: $light04;  border-radius: 10px; padding: 27px 30px; margin-top: 25px;
+                strong {color: $dark01; font-weight: 300;}
+                .input-wrap {
+                    position: relative;margin: 17px 0;
+                    button,a {border: 0; padding: 0; position: absolute; right: 0; color: $primary; background: none;height: 100%;padding: 0 23px; }
+                }
+                .txt {
+                    &, & > * {color: $dark04; font-size: 14px;}
+                    .ico {margin-right: 8px;   font-size: 18px; position: relative;top: 3px;  }
+                    a,button { text-decoration: underline; margin-left: 8px;}
+                }
+                
+            
+            } 
+        }  
+    }
+    >.btn {margin-top: 60px;}
+    .txt-bottom {
+        text-align: center; margin-top: 60px;
+        a {color: $dark02; text-decoration: underline; font-weight: 600; margin-left: 17px;}
+    }
+}

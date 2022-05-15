@@ -69,3 +69,9 @@
     <span>이미 회원가입 하셨나요?</span><button>로그인</button>
   </form>
 </template>
+
+<script>
+export default {
+  name: "joinView",
+};
+</script>

@@ -1,0 +1,52 @@
+.cont-tit {font-size: 36px; font-family: 'kangwon'; line-height: 1;}
+
+
+
+//top-wrap
+.top-wrap{position: relative;
+
+}
+
+
+
+//search-wrap
+.search-wrap {width: 297px;height: 48px;   position: absolute;right: 0; top: 0;
+    input {border-radius: 600px;}
+    .btn {position: absolute; top: 0; right: 0; font-size: 25px; min-width: inherit; padding: 0 22px; color: $dark02;}
+}
+
+//sort-wrap 
+.sort-wrap {@include clear(); margin: 50px 0;
+    .select-group {float: left;}
+    .toggle-button-wrap {float: right;}
+}
+
+//select-group
+.select-group {display: flex;
+    >.item {margin-right: 15px;}
+}
+
+
+//toggle-button-wrap
+.toggle-button-wrap{ display: flex;align-items: center;
+    .toggle-button{margin-left: 15px; position: relative;  top: 50%; width: 51px; height: 33px;overflow: hidden;border-radius: 30px;
+        .knobs,.layer { position: absolute; top: 0;right: 0; bottom: 0; left: 0;}
+        .knobs,.knobs:before,.layer { transition: 0.3s ease all;}
+        .layer { width: 100%; background-color: $light01; transition: 0.3s ease all;z-index: 1;}
+        .knobs { z-index: 2;
+            &:before { @include box_shadow(7, 3, 10, 0.19);  content: ""; position: absolute;  top: 2px; left: 3px; width: 20px; height: 10px;  padding: 9px 4px; background-color: $white; border-radius: 50%; transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;}
+        }
+        .checkbox { position: relative; width: 100%; height: 100%;  padding: 0;margin: 0; opacity: 0; cursor: pointer; z-index: 3;
+            &:checked + .knobs:before {content: "";  left: 20px; @include box_shadow(-6, 3, 10, 0.19); }
+            &:checked ~ .layer { background-color: $secondary;}
+        }
+    }
+}
+
+
+
+
+
+
+
+

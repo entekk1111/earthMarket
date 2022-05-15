@@ -33,6 +33,12 @@ const routes = [
     name: "join",
     component: () => import("../views/login/joinView.vue"),
   },
+  //로그인
+  {
+    path: "/login",
+    name: "login",
+    component: () => import("../views/login/loginView.vue"),
+  },
 
   // *** 시세  ***
   //시세
