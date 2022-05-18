@@ -225,7 +225,6 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "../../assets/scss/login.scss";
 #header .util-wrap,
 #header .gnb,
 #footer {
