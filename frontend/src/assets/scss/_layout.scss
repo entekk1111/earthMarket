@@ -6,26 +6,27 @@
 }
 
 //logo
-.logo {width: 200px;height: 55px; background: url(../image/logo.svg) no-repeat;
+.logo {width: 185px;height: 51px; background: url(../image/logo.svg) no-repeat;background-size: 100%;
     a {width: 100%; height: 100%;}
 }
-.logo-gray {width: 200px;height: 55px; background: url(../image/logo_gray.svg) no-repeat; }
+.logo-gray {width: 159px;height: 43px; background: url(../image/logo_gray.svg) no-repeat;     background-size: 100%;}
 .grab { max-width: 1200px;margin: 0 auto;}
 
 
 //header
-.header {padding: 15px 0; margin-bottom: 26px; border-bottom: 1px solid #E5E7E9;
+.header {padding: 23px 0; margin-bottom: 26px; border-bottom: 1px solid #E5E7E9;
     .grab, .gnb, .link-join {display: flex;  align-items: center;}
     .grab {position: relative;
-        .gnb { margin-left: 40px;
+        .gnb { margin-left: 50px;
             > li {padding-left: 26px;
-                a {font-weight: 600;
+                &:first-child {padding-left: 0;}
+                a {font-weight: 600; 
                     &:hover{text-decoration: underline;}
                 }
             }
         }
         .util-wrap {position: absolute; right: 0; display: flex;
-            > a {padding: 0 25px; font-size: 1.09rem;}
+            > a {padding:15px 27px; font-size: 1.2rem;}
             .link-join {margin-right: 35px;
                 li {padding-left: 26px;
                     a {font-weight: 600;
@@ -37,6 +38,8 @@
         }
     }
 }
+.header .grab .gnb > li a,
+.header .grab .util-wrap .link-join li a {font-size: 18.5px;}
 
 
 //container 
@@ -45,14 +48,14 @@
 
 
 //footer 
-.footer {border-top: 1px solid #e5e7e9; padding: 15px 0;margin-top: 38px;
+.footer {border-top: 1px solid #e5e7e9; padding: 43px 0;margin-top: 38px;
     .grab {
         display: flex; justify-content: space-between; align-items: center;
         .menu {display: flex;
             li{
                 @include relative;
                 &:not(:first-child):after{@include deco_line(1,21,$dark03,3, 14); }
-                a {font-family: 'kangwon'; font-size: 16px; padding-left: 33px; color:$dark03;
+                a {font-family: 'kangwon'; font-size: 18px; padding-left: 33px; color:$dark03;
                     &:hover{text-decoration: underline;}
                 }
             }
