@@ -230,4 +230,7 @@ export default {
 #footer {
   display: none;
 }
+.header {
+  border-bottom: 0;
+}
 </style>

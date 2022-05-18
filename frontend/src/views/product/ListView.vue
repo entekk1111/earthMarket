@@ -1,12 +1,16 @@
 <template>
-  <div class="contentList-wrap">
-    <!-- top-wrap -->
-    <div class="top-wrap">
-      <h2 class="cont-tit">상품 모아보기</h2>
-      <SearchInput />
+  <div class="grab">
+    <!-- contentList-wrap -->
+    <div class="contentList-wrap">
+      <!-- top-wrap -->
+      <div class="top-wrap">
+        <h2 class="cont-tit">상품 모아보기</h2>
+        <SearchInput />
+      </div>
+      <!-- // top-wrap -->
+      <SortingBox />
     </div>
-    <!-- // top-wrap -->
-    <SortingBox />
+    <!--  //contentList-wrap -->
   </div>
 </template>
 

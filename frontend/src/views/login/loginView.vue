@@ -23,9 +23,9 @@
         <a href="javascript:void(0);" class="btn btn-green">로그인</a>
       </div>
       <ul class="find-group">
-        <li><a href="javascript:void(0);">아이디 찾기</a></li>
+        <li><a href="/findId">아이디 찾기</a></li>
         <li><a href="/join">회원가입</a></li>
-        <li><a href="javascript:void(0);">비밀번호 찾기</a></li>
+        <li><a href="/findpwd">비밀번호 찾기</a></li>
       </ul>
       <div class="sns-group">
         <strong class="tit-style">간편로그인</strong>
@@ -62,5 +62,8 @@ export default {
 #header,
 #footer {
   display: none;
+}
+.header {
+  border-bottom: 0;
 }
 </style>

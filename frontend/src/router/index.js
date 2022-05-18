@@ -31,13 +31,25 @@ const routes = [
   {
     path: "/join",
     name: "join",
-    component: () => import("../views/login/joinView.vue"),
+    component: () => import("../views/login/JoinView.vue"),
   },
   //로그인
   {
     path: "/login",
     name: "login",
-    component: () => import("../views/login/loginView.vue"),
+    component: () => import("../views/login/LoginView.vue"),
+  },
+  //아이디찾기
+  {
+    path: "/findId",
+    name: "findId",
+    component: () => import("../views/login/FindId.vue"),
+  },
+  //비밀번호찾기
+  {
+    path: "/findpwd",
+    name: "findpwd",
+    component: () => import("../views/login/FindPwd.vue"),
   },
 
   // *** 시세  ***
