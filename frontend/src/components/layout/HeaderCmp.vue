@@ -21,8 +21,8 @@
       <!-- util-wrap -->
       <div class="util-wrap">
         <ul class="link-join">
-          <li><router-link to="/join">로그인</router-link></li>
-          <li><router-link to="/login">시세</router-link></li>
+          <li><router-link to="/join">회원가입</router-link></li>
+          <li><router-link to="/login">로그인</router-link></li>
         </ul>
         <a href="javascript:void(0);" class="btn btn-blue">상품올리기</a>
       </div>

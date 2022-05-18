@@ -24,7 +24,7 @@
               class="dropdown-item"
               v-for="dropdownItem in dropdownList"
               :key="dropdownItem"
-              href="#"
+              href="javascript:void(0);"
             >
               {{ dropdownItem.item }}
             </li>
