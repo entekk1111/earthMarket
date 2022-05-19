@@ -3,9 +3,9 @@
   <div class="sort-wrap">
     <!-- select-group -->
     <ul class="select-group">
-      <li class="item" v-for="(item, index) in list" :key="item">
+      <li class="item" v-for="item in list" :key="item">
         <div class="select-wrap dropdown">
-          <button
+          <!-- <button
             class="btn dropdown-toggle"
             type="button"
             :id="'dropdownMenuButton' + index"
@@ -13,10 +13,9 @@
             aria-expanded="false"
           >
             {{ item.sort }}
-          </button>
-
+          </button> -->
           <!-- dropdown-menu -->
-          <ul
+          <!-- <ul
             class="dropdown-menu"
             :aria-labelledby="'dropdownMenuButton' + index"
           >
@@ -28,8 +27,15 @@
             >
               {{ dropdownItem.item }}
             </li>
-          </ul>
+          </ul> -->
           <!-- //dropdown-menu -->
+          <b-dropdown id="dropdown-1" :text="sort">
+            <b-dropdown-item>First Action</b-dropdown-item>
+            <b-dropdown-item>Second Action</b-dropdown-item>
+            <b-dropdown-item>Third Action</b-dropdown-item>
+            <b-dropdown-item active>Active action</b-dropdown-item>
+            <b-dropdown-item disabled>Disabled action</b-dropdown-item>
+          </b-dropdown>
         </div>
       </li>
     </ul>
@@ -59,12 +65,6 @@ export default {
         { sort: "가격" },
         { sort: "지역" },
         { sort: "거래방법" },
-      ],
-      dropdownList: [
-        { item: "sdfsd" },
-        { item: "sdfsd" },
-        { item: "sdfsd" },
-        { item: "sdfsd" },
       ],
     };
   },

@@ -1,0 +1,17 @@
+@charset "utf-8";
+@import "_settings.scss";
+
+.contentList-wrap {
+    .contentList {
+        @include clear();
+        li{ width: calc((100% - 97px) / 4); margin-right: 32px; margin-bottom: 32px; float: left;
+            &:nth-child(4n) {margin-right: 0;}
+            .txt-wrap {
+                * {display: block;}
+                .tag {color:$dark04; font-size: 14px;}
+                .tit {color:$dark01; font-size: 18px; font-weight: 600;}
+                .price {color:$dark01; font-size: 20px; font-weight: 900;}
+            } 
+        }
+    }
+}

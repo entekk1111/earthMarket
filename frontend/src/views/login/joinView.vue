@@ -37,16 +37,19 @@
                 type="text"
                 id="phoneNum"
                 placeholder="휴대폰 번호를 입력해주세요"
+                @input="typingPhone($event)"
               />
               <button
                 type="button"
                 id="btn_auth"
-                class="btn btn-green-line disabled"
                 data-bs-toggle="collapse"
                 href="#collapse1"
                 role="button"
                 aria-expanded="false"
                 aria-controls="collapse1"
+                @click="phoneConfirm()"
+                class="btn btn-green-line"
+                :class="{ disabled: isDisabled }"
               >
                 인증하기
               </button>
@@ -222,6 +225,21 @@
 <script>
 export default {
   name: "joinView",
+  data: function () {
+    return {
+      isDisabled: true,
+    };
+  },
+  methods: {
+    phoneConfirm() {
+      this.isDisabled = !this.isDisabled; //인증하기 버튼 클릭시  disabled 클래스 삭제
+    },
+    typingPhone(event) {
+      if (event.target.value == true) {
+        this.isDisabled = !this.isDisabled;
+      }
+    },
+  },
 };
 </script>
 <style lang="scss">
