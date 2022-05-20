@@ -31,13 +31,13 @@ const routes = [
   {
     path: "/join",
     name: "join",
-    component: () => import("../views/login/JoinView.vue"),
+    component: () => import("../views/login/joinView.vue"),
   },
   //로그인
   {
     path: "/login",
     name: "login",
-    component: () => import("../views/login/LoginView.vue"),
+    component: () => import("../views/login/loginView.vue"),
   },
   //아이디찾기
   {
