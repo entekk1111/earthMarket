@@ -12,7 +12,7 @@
       <div class="contentList-group">
         <ul class="contentList">
           <li v-for="item in list" :key="item">
-            <a href="javascript:void(0);">
+            <a href="/list/detail?productCode=0">
               <div class="img-wrap">
                 <img :src="item.photo" alt="" />
               </div>
@@ -31,6 +31,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import SearchInput from "../../components/SearchInput.vue";
 import SortingBox from "../../components/SortingBox.vue";
 
@@ -42,69 +43,19 @@ export default {
   },
   data: function () {
     return {
-      list: [
-        {
-          photo: require("../../assets/image/board/sample01.jpg"),
-          tag: "달콤팜",
-          tit: "새콤달콤 설향딸기",
-          price: "4,200",
-        },
-        {
-          photo: require("../../assets/image/board/sample01.jpg"),
-          tag: "달콤팜",
-          tit: "새콤달콤 설향딸기",
-          price: "4,200",
-        },
-        {
-          photo: require("../../assets/image/board/sample01.jpg"),
-          tag: "달콤팜",
-          tit: "새콤달콤 설향딸기",
-          price: "4,200",
-        },
-        {
-          photo: require("../../assets/image/board/sample01.jpg"),
-          tag: "달콤팜",
-          tit: "새콤달콤 설향딸기",
-          price: "4,200",
-        },
-        {
-          photo: require("../../assets/image/board/sample01.jpg"),
-          tag: "달콤팜",
-          tit: "새콤달콤 설향딸기",
-          price: "4,200",
-        },
-        {
-          photo: require("../../assets/image/board/sample01.jpg"),
-          tag: "달콤팜",
-          tit: "새콤달콤 설향딸기",
-          price: "4,200",
-        },
-        {
-          photo: require("../../assets/image/board/sample01.jpg"),
-          tag: "달콤팜",
-          tit: "새콤달콤 설향딸기",
-          price: "4,200",
-        },
-        {
-          photo: require("../../assets/image/board/sample01.jpg"),
-          tag: "달콤팜",
-          tit: "새콤달콤 설향딸기",
-          price: "4,200",
-        },
-        {
-          photo: require("../../assets/image/board/sample01.jpg"),
-          tag: "달콤팜",
-          tit: "새콤달콤 설향딸기",
-          price: "4,200",
-        },
-        {
-          photo: require("../../assets/image/board/sample01.jpg"),
-          tag: "달콤팜",
-          tit: "새콤달콤 설향딸기",
-          price: "4,200",
-        },
-      ],
+      list: [],
     };
+  },
+  created() {
+    axios
+      .get("/api/product/getList")
+      .then((succese) => {
+        console.log(succese.data);
+        this.list = succese.data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   },
 };
 </script>
