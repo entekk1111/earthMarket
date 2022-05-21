@@ -11,10 +11,13 @@
       <SortingBox />
       <div class="contentList-group">
         <ul class="contentList">
-          <li v-for="item in list" :key="item">
+          <li v-for="item in list" :key="item.num">
             <a href="/list/detail?productCode=0">
               <div class="img-wrap">
-                <img :src="item.photo" alt="" />
+                <img
+                  :src="require(`@/assets/image/board/${item.photo}`)"
+                  alt=""
+                />
               </div>
               <div class="txt-wrap">
                 <span class="tag">{{ item.tag }}</span>

@@ -11,13 +11,13 @@ import com.earthMarket.vo.ProductVO;
 public class ProductService {
 	
 	public List<ProductVO> getProductList() {
-		ProductVO pv = new ProductVO();
 		List<ProductVO> list = new ArrayList<ProductVO>();
 		
 		//임시데이터
-		for(int i = 1; i < 21; i++) {
+		for(int i = 1; i < 41; i++) {
+			ProductVO pv = new ProductVO();
 			pv.setNum(i);
-			pv.setPhoto("../../assets/image/board/sample01.jpg");
+			pv.setPhoto("sample01.jpg");
 			pv.setTag("달콤팜" + i);
 			pv.setTit("새콤달콤 설향딸기" + i);
 			pv.setPrice("42,000");
