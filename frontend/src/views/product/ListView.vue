@@ -50,15 +50,20 @@ export default {
     };
   },
   created() {
-    axios
-      .get("/api/product/getList")
-      .then((succese) => {
-        console.log(succese.data);
-        this.list = succese.data;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    this.getList();
+  },
+  methods: {
+    getList() {
+      axios
+        .get("/api/product/getList")
+        .then((succese) => {
+          console.log(succese.data);
+          this.list = succese.data;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
   },
 };
 </script>
