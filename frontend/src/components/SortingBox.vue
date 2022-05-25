@@ -4,44 +4,23 @@
     <div class="sort-wrap">
       <!-- select-group -->
       <ul class="select-group">
-        <li class="item" v-for="item in list" :key="item">
-          <div class="select-wrap dropdown">
-            <!-- <button
-            class="btn dropdown-toggle"
-            type="button"
-            :id="'dropdownMenuButton' + index"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            {{ item.sort }}
-          </button> -->
-            <!-- dropdown-menu -->
-            <!-- <ul
-            class="dropdown-menu"
-            :aria-labelledby="'dropdownMenuButton' + index"
-          >
-            <li
-              class="dropdown-item"
-              v-for="dropdownItem in dropdownList"
-              :key="dropdownItem"
-              href="javascript:void(0);"
-            >
-              {{ dropdownItem.item }}
-            </li>
-          </ul> -->
-            <!-- //dropdown-menu -->
-            <b-dropdown id="dropdown-1" :text="{ sort }">
-              <!-- <b-dropdown-item v-for="item in items" :key="item">
-                {{ item.sort }}</b-dropdown-item
-              > -->
-              <b-dropdown-item>First Action</b-dropdown-item>
-              <b-dropdown-item>Second Action</b-dropdown-item>
-              <b-dropdown-item>Third Action</b-dropdown-item>
-              <b-dropdown-item active>Active action</b-dropdown-item>
-              <b-dropdown-item disabled>Disabled action</b-dropdown-item>
-            </b-dropdown>
+        <b-dropdown
+          v-for="dropdownItem in dropdownItems"
+          :key="dropdownItem"
+          class="btn"
+        >
+          <template #button-content>
+            {{ dropdownItem.tit }}
+          </template>
+          <div v-for="dropdownlist in dropdownlists" :key="dropdownlist">
+            <b-dropdown-item href="javascript:void(0);">
+              {{ dropdownlist.content }}
+            </b-dropdown-item>
+            <b-dropdown-item href="javascript:void(0);">
+              {{ dropdownlist.content2 }}
+            </b-dropdown-item>
           </div>
-        </li>
+        </b-dropdown>
       </ul>
       <!-- //select-group -->
 
@@ -61,7 +40,7 @@
     <div class="contentList-wrap">
       <div class="total-result">
         <strong>총 1045 상품</strong>
-        <span>전체 상품 보기</span>
+        <span class="total-view">전체 상품 보기</span>
       </div>
       <ul class="contentList">
         <li v-for="(productItem, index) in productlist" :key="index">
@@ -85,12 +64,13 @@
 export default {
   data: function () {
     return {
-      list: [
-        { sort: "상품종류" },
-        { sort: "가격" },
-        { sort: "지역" },
-        { sort: " 거래방법" },
+      dropdownItems: [
+        { tit: "상품종류" },
+        { tit: "가격" },
+        { tit: "지역" },
+        { tit: "거래방법" },
       ],
+      dropdownlists: [{ content: "An item", content2: "An item1222" }],
       productlist: [
         {
           photo: require("../assets/image/board/sample01.jpg"),
