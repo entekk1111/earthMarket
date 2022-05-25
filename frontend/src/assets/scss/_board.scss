@@ -16,7 +16,7 @@
 
 //select-group
 .select-group {display: flex;
-    >.btn {margin-right: 15px; background: url(../image/dropdown-arr.png) no-repeat 90% center;}
+    >.btn-dropdown {margin-right: 15px; background: url(../image/dropdown-arr.png) no-repeat 79% center;}
 }
 
 
@@ -62,4 +62,17 @@
     }
 }
 
+.bottom-wrap {text-align: center;}
+
+//pagination
+.pagination {margin-top: 34px; display: flex; justify-content: center; padding-left: 0;  list-style: none; border-radius: 0.25rem;
+    .page-link {border-color: transparent !important; width: 32px;height: 32px;line-height: 1;font-weight: 900; padding: 0;}
+    .page-item { font-weight: 900; font-size: 14px;    
+        &.active {
+            .page-link {border-radius: 600px;}
+        }
+       
+    }  
+}    
+.page-result {margin-top: 30px;}   
 

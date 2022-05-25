@@ -7,7 +7,7 @@
         <b-dropdown
           v-for="dropdownItem in dropdownItems"
           :key="dropdownItem"
-          class="btn"
+          class="btn-dropdown"
         >
           <template #button-content>
             {{ dropdownItem.tit }}
