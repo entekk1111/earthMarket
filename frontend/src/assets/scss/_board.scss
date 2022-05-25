@@ -37,8 +37,13 @@
 }
 
 
-
+//contentList-wrap
 .contentList-wrap {
+    .total-result {
+        position: relative;margin-bottom: 45px;
+        strong {color: $dark05;}
+        .total-view {color: $dark02; position: absolute; right: 0;}
+    }
     .contentList {
         @include clear();
         li{ width: calc((100% - 97px) / 4); margin-right: 32px; margin-bottom: 32px; float: left;
