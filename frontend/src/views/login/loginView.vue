@@ -30,12 +30,7 @@
       <div class="sns-group">
         <strong class="tit-style">간편로그인</strong>
         <ul>
-          <li v-for="sns in snsGroup" :key="sns" class="ico ico0" + index>
-            <a href="javascript:void(0);">
-              <span class="sr-only">{{}}로그인</span>
-            </a>
-          </li>
-          <!-- <li class="ico ico01">
+          <li class="ico ico01">
             <a href="javascript:void(0);"
               ><span class="sr-only">카카오톡로그인</span></a
             >
@@ -44,7 +39,7 @@
             <a href="javascript:void(0);"
               ><span class="sr-only">네이버로그인</span></a
             >
-          </li> -->
+          </li>
         </ul>
       </div>
     </div>
