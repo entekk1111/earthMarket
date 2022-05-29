@@ -36,27 +36,6 @@
       <!-- // toggle-button-wrap -->
     </div>
     <!--  //sort-wrap -->
-
-    <div class="contentList-wrap">
-      <div class="total-result">
-        <strong>총 1045 상품</strong>
-        <span class="total-view">전체 상품 보기</span>
-      </div>
-      <ul class="contentList">
-        <li v-for="(productItem, index) in productlist" :key="index">
-          <a href="javascript:void(0);">
-            <div class="img-wrap">
-              <img :src="productItem.photo" alt="" />
-            </div>
-            <div class="txt-wrap">
-              <span class="tag">{{ productItem.tag }}</span>
-              <p class="tit">{{ productItem.tit }}</p>
-              <span class="price">{{ productItem.price }}원</span>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </div>
   </div>
 </template>
 
@@ -71,44 +50,6 @@ export default {
         { tit: "거래방법" },
       ],
       dropdownlists: [{ content: "An item", content2: "An item1222" }],
-      productlist: [
-        {
-          photo: require("../assets/image/board/sample01.jpg"),
-          tag: "달콤팜",
-          tit: "새콤달콤 설향딸기",
-          price: "4,200",
-        },
-        {
-          photo: require("../assets/image/board/sample01.jpg"),
-          tag: "달콤팜",
-          tit: "새콤달콤 설향딸기",
-          price: "4,200",
-        },
-        {
-          photo: require("../assets/image/board/sample01.jpg"),
-          tag: "달콤팜",
-          tit: "새콤달콤 설향딸기",
-          price: "4,200",
-        },
-        {
-          photo: require("../assets/image/board/sample01.jpg"),
-          tag: "달콤팜",
-          tit: "새콤달콤 설향딸기",
-          price: "4,200",
-        },
-        {
-          photo: require("../assets/image/board/sample01.jpg"),
-          tag: "달콤팜",
-          tit: "새콤달콤 설향딸기",
-          price: "4,200",
-        },
-        {
-          photo: require("../assets/image/board/sample01.jpg"),
-          tag: "달콤팜",
-          tit: "새콤달콤 설향딸기",
-          price: "4,200",
-        },
-      ],
     };
   },
 };

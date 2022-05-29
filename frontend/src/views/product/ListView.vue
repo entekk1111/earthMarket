@@ -9,8 +9,30 @@
       </div>
       <!-- // top-wrap -->
       <SortingBox />
-      <!-- contentList-group -->
+
+      <!-- contentList-group  -->
       <div class="contentList-group">
+        <div class="total-result">
+          <strong>총 1045 상품</strong>
+          <span class="total-view">전체 상품 보기</span>
+        </div>
+        <ul class="contentList">
+          <li v-for="productItem in productlist" :key="productItem.num">
+            <a href="/list/detail?productCode=0">
+              <button type="button"><span class="sr-only">좋아요</span></button>
+              <div class="img-wrap">
+                <img :src="productItem.photo" alt="" />
+              </div>
+              <div class="txt-wrap">
+                <span class="tag">{{ productItem.tag }}</span>
+                <p class="tit">{{ productItem.tit }}</p>
+                <span class="price">{{ productItem.price }}원</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- <div class="contentList-group">
         <ul class="contentList">
           <li v-for="item in list" :key="item.num">
             <a href="/list/detail?productCode=0">
@@ -29,18 +51,12 @@
             </a>
           </li>
         </ul>
-      </div>
+      </div> -->
       <!-- // contentList-group -->
 
       <!-- bottom-wrap -->
       <div class="bottom-wrap">
-        <!-- pagination -->
-        <b-pagination
-          v-model="currentPage"
-          :total-rows="rows"
-          :per-page="perPage"
-        ></b-pagination>
-        <!--  //pagination -->
+        <Pagination />
         <p class="page-result">총 1045 중 {{ currentPage }}-20 상품</p>
       </div>
       <!--  // bottom-wrap -->
@@ -53,25 +69,58 @@
 import axios from "axios";
 import SearchInput from "../../components/SearchInput.vue";
 import SortingBox from "../../components/SortingBox.vue";
+import Pagination from "../../components/PaginaionComp.vue";
 
 export default {
   name: "ListPage",
   components: {
     SearchInput, //찾기
     SortingBox, //드롭다운메뉴
+    Pagination, //페이지네이션
   },
   data: function () {
     return {
       list: [],
-      perPage: 3,
-      currentPage: 1,
-      items: [],
+      //items: [],
+      productlist: [
+        {
+          photo: require("../../assets/image/board/sample01.jpg"),
+          tag: "달콤팜",
+          tit: "새콤달콤 설향딸기",
+          price: "4,200",
+        },
+        {
+          photo: require("../../assets/image/board/sample01.jpg"),
+          tag: "달콤팜",
+          tit: "새콤달콤 설향딸기",
+          price: "4,200",
+        },
+        {
+          photo: require("../../assets/image/board/sample01.jpg"),
+          tag: "달콤팜",
+          tit: "새콤달콤 설향딸기",
+          price: "4,200",
+        },
+        {
+          photo: require("../../assets/image/board/sample01.jpg"),
+          tag: "달콤팜",
+          tit: "새콤달콤 설향딸기",
+          price: "4,200",
+        },
+        {
+          photo: require("../../assets/image/board/sample01.jpg"),
+          tag: "달콤팜",
+          tit: "새콤달콤 설향딸기",
+          price: "4,200",
+        },
+        {
+          photo: require("../../assets/image/board/sample01.jpg"),
+          tag: "달콤팜",
+          tit: "새콤달콤 설향딸기",
+          price: "4,200",
+        },
+      ],
     };
-  },
-  computed: {
-    rows() {
-      return this.items.length;
-    },
   },
   created() {
     this.getList();
@@ -91,10 +140,3 @@ export default {
   },
 };
 </script>
-
-<style scoped lang="scss">
-.pagination ::v-deep {
-  @import "~bootstrap/dist/css/bootstrap.min";
-  @import "~bootstrap-vue/dist/bootstrap-vue.min";
-}
-</style>
