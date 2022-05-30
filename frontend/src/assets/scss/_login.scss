@@ -23,7 +23,7 @@ html, body, #container,.grab,.login-wrap {height: 100%;}
 
 //sns-group
 .sns-group {
-        margin-top: 63px;text-align: center;
+        margin-top: 63px;text-align: center;border-bottom: 1px solid $light03;  padding-bottom: 47px; margin-bottom: -40px;
         ul {
             margin-top: 27px;
             li:not(:first-child) {margin-left: 24px;}
@@ -47,7 +47,7 @@ html, body, #container,.grab,.login-wrap {height: 100%;}
     }
     //find-group
     .find-group {
-        text-align: center; margin-top: 56px;
+        text-align: center; margin-top: 56px;padding-top: 47px; margin-top: 40px;
         & >* {@include display_mode;}
         li {
             position: relative;
@@ -67,8 +67,7 @@ html, body, #container,.grab,.login-wrap {height: 100%;}
 .join-wrap {
     padding-bottom: 170px;
     //form-group
-    .form-group {
-        border-top: 1px solid $light03;  padding-top: 47px; margin-top: 40px;
+    .form-group {padding-top: 47px; margin-top: 40px;
         > li {
             margin-bottom: 31px;
             .pwd-auth{
@@ -93,4 +92,9 @@ html, body, #container,.grab,.login-wrap {height: 100%;}
         text-align: center; margin-top: 60px;
         a {color: $dark02; text-decoration: underline; font-weight: 600; margin-left: 17px;}
     }
+}
+
+.findId {
+    .form-group {margin-top: 20px;}
+    > .btn {margin-top: 40px;}
 }
