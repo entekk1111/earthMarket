@@ -51,6 +51,12 @@ const routes = [
     name: "findpwd",
     component: () => import("../views/login/FindPwd.vue"),
   },
+  //새 비밀번호 설정
+   {
+    path: "/newPwd",
+    name: "newPwd",
+    component: () => import("../views/login/NewPwd.vue"),
+  },
 
   // *** 시세  ***
   //시세
