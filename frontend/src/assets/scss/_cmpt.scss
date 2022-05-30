@@ -97,3 +97,9 @@ button.disabled, a.disabled {opacity: 0.3; cursor: auto;}
 
 
 
+//bootstrap 
+.collapse {display: none;
+	&.show{ display: block;}
+}
+.collapsing { position: relative;height: 0; overflow: hidden; transition: height .35s ease;}
+

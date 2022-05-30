@@ -1,8 +1,6 @@
 
 @import "_settings.scss";
 
-/*** common for login ***/
-
 //layout
 html, body, #container,.grab,.login-wrap {height: 100%;}
 .layout { max-width: 442px; margin: 0 auto;}
@@ -27,7 +25,7 @@ html, body, #container,.grab,.login-wrap {height: 100%;}
         ul {
             margin-top: 27px;
             li:not(:first-child) {margin-left: 24px;}
-            .ico {@include display_mode; width: 48px; height: 48px; border-radius: $circle_radius; background-image: url('../image/ico-sns.png');}
+            .ico {@include display_mode; width: 48px; height: 48px; border-radius: $circle_radius; background-image: url('~@/assets/image/ico-sns.png');}
             .ico02{background-position: 48px 0;}
         }
 }

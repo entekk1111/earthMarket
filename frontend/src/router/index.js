@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import MainHome from "../views/MainHome.vue";
 
 Vue.use(VueRouter);
 
@@ -9,7 +8,7 @@ const routes = [
   {
     path: "/",
     name: "home",
-    component: MainHome,
+    component: () => import("../views/MainHome.vue"),
   },
 
   //**** 상품 product ***
