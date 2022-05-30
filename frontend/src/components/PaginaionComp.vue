@@ -18,11 +18,6 @@ export default {
       currentPage: 1,
     };
   },
-  computed: {
-    rows() {
-      return this.items.length;
-    },
-  },
 };
 </script>
 

@@ -8,50 +8,112 @@
         <SearchInput />
       </div>
       <!-- // top-wrap -->
-      <SortingBox />
 
-      <!-- contentList-group  -->
-      <div class="contentList-group">
+    <!-- sort-wrap -->
+    <div class="sort-wrap">
+
+      <!-- select-group -->
+      <ul class="select-group">
+        <li>
+          <b-dropdown class="btn-dropdown">
+            <template #button-content> 상품 종류 <i class="dropdown-arr"><span class="sr-only">열림/닫힘화살표</span></i>
+            </template>
+            <b-dropdown-item class="chbox_wrap"  v-for="productItem in productList" :key="productItem">
+                  <input type="checkbox"  name="" v-bind:id="'input' + productItem.id" />
+                  <label v-bind:for="'input' + productItem.id">
+                    {{ productItem.content }}
+                  </label>
+            </b-dropdown-item>
+            <li class="btn-wrap">
+              <button type="button" class="btn-cancel">취소</button>
+              <button type="button" class="btn btn-green sm">확인</button>
+            </li>
+          </b-dropdown>
+        </li> 
+        <li>
+          <b-dropdown class="btn-dropdown">
+            <template #button-content> 가격 <i class="dropdown-arr"><span class="sr-only">열림/닫힘화살표</span></i>
+            </template>
+            <li class="chbox_wrap"  v-for="priceItem in priceList" :key="priceItem">
+                <input type="checkbox"  name="" v-bind:id="'input' + priceItem.id" />
+                <label v-bind:for="'input' + priceItem.id">
+                  {{ priceItem.content }}원
+                </label>
+            </li>
+            <li class="btn-wrap">
+              <button type="button" class="btn-cancel">취소</button>
+              <button type="button" class="btn btn-green sm">확인</button>
+            </li>
+          </b-dropdown>
+        </li> 
+        <li>
+          <b-dropdown class="btn-dropdown">
+            <template #button-content> 지역 <i class="dropdown-arr"><span class="sr-only">열림/닫힘화살표</span></i>
+            </template>
+            <li class="chbox_wrap"  v-for="regionItem in regionList" :key="regionItem">
+                <input type="checkbox"  name="" v-bind:id="'input' + regionItem.id" />
+                <label v-bind:for="'input' + regionItem.id">
+                  {{ regionItem.content }}
+                </label>
+            </li>
+            <li class="btn-wrap">
+              <button type="button" class="btn-cancel">취소</button>
+              <button type="button" class="btn btn-green sm">확인</button>
+            </li>
+          </b-dropdown>
+        </li> 
+        <li>
+          <b-dropdown class="btn-dropdown">
+            <template #button-content> 거래방법 <i class="dropdown-arr"><span class="sr-only">열림/닫힘화살표</span></i>
+            </template>
+            <li class="chbox_wrap"  v-for="methodlItem in methodList" :key="methodlItem">
+                  <input type="checkbox"  name="" v-bind:id="'input' + methodlItem.id" />
+                  <label v-bind:for="'input' + methodlItem.id">
+                    {{ methodlItem.content }}
+                  </label>
+            </li>
+            <li class="btn-wrap">
+              <button type="button" class="btn-cancel">취소</button>
+              <button type="button" class="btn btn-green sm">확인</button>
+            </li>
+          </b-dropdown>
+        </li> 
+      </ul>
+      <!-- //select-group -->
+
+      <!-- toggle-button-wrap -->
+      <div class="toggle-button-wrap">
+        <label for="toggleBtn">내 근처 상품탐색</label>
+        <div class="toggle-button">
+          <input type="checkbox" id="toggleBtn" class="checkbox" />
+          <div class="knobs"></div>
+          <div class="layer"></div>
+        </div>
+      </div>
+      <!-- // toggle-button-wrap -->
+    </div>
+    <!--  //sort-wrap  -->
+
+    <!-- contentList-group  -->
+    <div class="contentList-group">
         <div class="total-result">
           <strong>총 1045 상품</strong>
-          <span class="total-view">전체 상품 보기</span>
+          <SortingBox />
         </div>
         <ul class="contentList">
           <li v-for="productItem in productlist" :key="productItem.num">
-            <a href="/list/detail?productCode=0">
-              <button type="button"><span class="sr-only">좋아요</span></button>
+              <button type="button" class="btn-like" :class="{active: isActive }" @click="toggle($event)"><span class="sr-only">좋아요</span></button>
               <div class="img-wrap">
                 <img :src="productItem.photo" alt="" />
               </div>
-              <div class="txt-wrap">
+              <a href="/list/detail?productCode=0" class="txt-wrap">
                 <span class="tag">{{ productItem.tag }}</span>
                 <p class="tit">{{ productItem.tit }}</p>
                 <span class="price">{{ productItem.price }}원</span>
-              </div>
-            </a>
+              </a>
           </li>
         </ul>
       </div>
-      <!-- <div class="contentList-group">
-        <ul class="contentList">
-          <li v-for="item in list" :key="item.num">
-            <a href="/list/detail?productCode=0">
-              <button type="button"><span class="sr-only">좋아요</span></button>
-              <div class="img-wrap">
-                <img
-                  :src="require(`@/assets/image/board/${item.photo}`)"
-                  alt=""
-                />
-              </div>
-              <div class="txt-wrap">
-                <span class="tag">{{ item.tag }}</span>
-                <strong class="tit">{{ item.tit }}</strong>
-                <strong class="price">{{ item.price }}원</strong>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div> -->
       <!-- // contentList-group -->
 
       <!-- bottom-wrap -->
@@ -62,6 +124,8 @@
       <!--  // bottom-wrap -->
     </div>
     <!--  //contentList-wrap -->
+
+    
   </div>
 </template>
 
@@ -80,8 +144,37 @@ export default {
   },
   data: function () {
     return {
+    //좋아요토글
+    isActive :false, 
+
+    //상품분류
+    productList: [
+        { id: '1', content: "곡물/견과류"},
+        { id: '2', content: "과실류"},
+        { id: '3', content: "채소/나물류"},
+        { id: '4', content: "축산물"},
+        { id: '5', content: "수산물"},
+      ],
+      priceList: [
+        {content: '1000'}
+      ],
+      regionList: [
+        {id: '6', content: "서울"},
+        {id: '7', content: "부산"},
+        {id: '8', content: "대구"},
+        {id: '9', content: "광주"},
+        {id: '10', content: "제주도"},
+        {id: '11', content: "대전"},
+      ],
+      methodList: [
+        {id: '12', content: "직거래"},
+        {id: '13', content: "일반택배"},
+        {id: '14', content: "당일배송"},
+      ],    
+
+
+      //상품리스트
       list: [],
-      //items: [],
       productlist: [
         {
           photo: require("../../assets/image/board/sample01.jpg"),
@@ -136,6 +229,16 @@ export default {
         .catch((error) => {
           console.log(error);
         });
+    },
+    //좋아요토글
+    toggle(event){
+      event.target.isActive = !event.target.isActive
+    },
+  },
+  computed: {
+    //페이지네이션
+    rows() {
+      return this.items.length;
     },
   },
 };
