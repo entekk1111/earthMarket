@@ -1,5 +1,7 @@
 <template>
   <div class="grab">
+
+
     <!-- join-wrap-->
     <form name="form" @submit.prevent="handleLogin">
       <div class="join-wrap layout">
@@ -33,17 +35,24 @@
           <li>
             <label for="phoneNum" class="label-tit">휴대폰 번호</label>
             <div class="input-wrap">
-              <input
-                type="text"
-                id="phoneNum"
-                placeholder="휴대폰 번호를 입력해주세요"
-                v-bind:value="inputText"
-                v-on:input="updateInput"
-              />
-              <b-button v-b-toggle.collapse1 class="btn btn-green-line disabled">
-                인증하기
-              </b-button> 
+
+                <input
+                  id="phoneNum"
+                  v-model="initial"
+                  type="text"
+                  placeholder="휴대폰 번호를 입력해주세요"
+                  @input="inputChanged($event)"
+                > 
+                <b-button
+                  v-b-toggle.collapse1
+                  class="btn btn-green-line"
+                  :class="{disabled : isDisabled}"
+                  @click="btnDisabled"
+                >
+                  인증하기
+                </b-button> 
             </div>
+
             <!--  pwd-auth -->
             <b-collapse id="collapse1">
                   <div class="pwd-auth">
@@ -60,21 +69,19 @@
                     data-bs-target="#collapse1"
                     aria-expanded="false"
                     aria-controls="collapse1"
+                    :class="{disabled : isDisabled}"
                   >
                     확인
                   </button>
                 </div>
-                <span class="txt"
-                  ><i class="ico iconify" data-icon="eva:info-outline"></i
-                  >문자를 받지 못하셨나요?<a href="javascript:void(0);"
-                    >문자 재전송하기</a
-                  ></span
-                >
+                <span class="txt">
+                  <!-- <i class="ico iconify" data-icon="eva:info-outline"></i> -->
+                  <Icon icon="mdi-light:home" />
+                  문자를 받지 못하셨나요?
+                  <a href="javascript:void(0);">문자 재전송하기</a>
+                </span>
               </div>
             </b-collapse>
-
-
-
 
             <!-- // pwd-auth -->
             <span class="validity">오류입니다.</span>
@@ -151,27 +158,24 @@ export default {
   name: "joinView",
   data: function () {
     return {
-      isDisabled: true,
+      isDisabled : true,
     };
   },
   methods: {
-    //인증하기 버튼 클릭시  disabled 클래스 삭제
-    // phoneConfirm() {
-    //   this.isDisabled = !this.isDisabled; 
-    // },
-    // typingPhone(event) {
-    //   if (event.target.value == true) {
-    //     this.isDisabled = !this.isDisabled;
-    //   }
-    // },
-    updateInput(event) {
-      var updatedText = event.target.value;
-      if(updatedText.val().length > 1) {
-          this.inputText = updatedText;
-          console.log(updatedText);
-      }
-      
-    }
+    // 휴대폰 인증하기 : input에 내용물 있을 경우 인증하기 버튼 disabled 삭제 / input에 내용문 없을 경우 버튼 disabled 추가  
+    inputChanged(event) {
+          if(event.target.value.length > 0) { 
+            this.isDisabled = false
+          }else {
+            this.isDisabled = true;
+          }
+    },
+    // 휴대폰 인증하기 : 드롭다운 된 후 다시 disabeled 
+    btnDisabled() {
+      setTimeout(() => {
+          this.isDisabled = true
+        }, 100);
+    } 
   },
 };
 </script>
