@@ -16,7 +16,7 @@ import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 // import "bootstrap-vue/dist/bootstrap-vue.css";
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
-Vue.use(axios);
+Vue.prototype.$http = axios;
 
 Vue.config.productionTip = false;
 
