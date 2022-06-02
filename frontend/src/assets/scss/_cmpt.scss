@@ -69,11 +69,11 @@ button.disabled, a.disabled {opacity: 0.3; cursor: auto;}
 }
 .dropdown {
         .dropdown-arr {background: url(../image/dropdown-arr.png) no-repeat;display: inline-block; width: 12px; height: 9px; margin-left: 10px;}
-        .dropdown-menu {  padding: 19px 20px;  min-width: 222px; position: absolute; z-index: 1000; display: none; 
+        .dropdown-menu { padding: 17px 20px; min-width: 222px; position: absolute; z-index: 1000; display: none; 
             list-style: none;  background-color: $white; background-clip: padding-box; border-radius: 16px; border: 1px solid $light02;box-shadow: 0px 5px 11px rgba(0, 0, 0, 0.23); margin-top: 14px;
             &.visible,&.show {display: block;}
             .inner { padding: 24px 20px;}
-            > li:not(:last-child) {margin-bottom: 20px;}
+            > li:not(:last-child) {margin-bottom: 30px;}
             .dropdown-item {display: block;}
         }
         

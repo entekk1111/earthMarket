@@ -3,21 +3,24 @@
 
 
 //search-wrap
-.search-wrap {width: 297px; position: absolute;right: 0; top: 0;
-    input {border-radius: 600px;}
+.search-wrap {width: 297px; position: absolute;right: 0; top: -5px;
+    input {border-radius: 600px; padding: 0 23px 0 29px;
+        &::placeholder {color: $light01;}
+    }
     .btn {width: 26px; position: absolute; top: 0; right: 23px; font-size: 25px; min-width: inherit; color: $dark02;background: url('../image/board/search.png') no-repeat center;}
 }
 
 //sort-wrap 
-.sort-wrap {@include clear(); margin: 50px 0;
+.sort-wrap {@include clear(); margin: 47px 0;
     .select-group {float: left;}
     .toggle-button-wrap {float: right;}
+    label {color: $dark02;}
 }
 
 
 //toggle-button-wrap
 .toggle-button-wrap{ display: flex;align-items: center;
-    .toggle-button{margin-left: 15px; position: relative;  top: 50%; width: 51px; height: 33px;overflow: hidden;border-radius: 30px;
+    .toggle-button{margin-left: 20px; position: relative;  top: 50%; width: 51px; height: 33px;overflow: hidden;border-radius: 30px;
         .knobs,.layer { position: absolute; top: 0;right: 0; bottom: 0; left: 0;}
         .knobs,.knobs:before,.layer { transition: 0.3s ease all;}
         .layer { width: 100%; background-color: $light01; transition: 0.3s ease all;z-index: 1;}
@@ -36,14 +39,15 @@
 .contentList-wrap {
     .total-result {
         position: relative;margin-bottom: 45px;
-        strong {color: $dark05;}
+        strong {color: $dark05; font-weight: 600;}
         .total-view {color: $dark02; position: absolute; right: 0; top: 0;
-            .dropdown-menu {left: auto !important; right: 0;margin-top: 0;}
+            .dropdown-menu {left: auto !important; right: 0;top: 11px !important;margin-top: 0;}
+            .btn { color: $dark02;min-height: inherit;}
         }
     }
     .contentList {
         @include clear();
-        li{ width: calc((100% - 97px) / 4); margin-right: 32px; margin-bottom: 32px; float: left; position: relative;
+        li{ width: calc((100% - 97px) / 4); margin-right: 32px; margin-bottom: 37px; float: left; position: relative;
             &:nth-child(4n) {margin-right: 0;}
             .btn-like {
                 background: url(../image/board/heart.png) no-repeat; width: 21px; height: 21px; position: absolute;       right: 16px;
