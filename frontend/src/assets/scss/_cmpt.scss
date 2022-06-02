@@ -93,7 +93,9 @@ button.disabled, a.disabled {opacity: 0.3; cursor: auto;}
 
 //pagination
 .pagination {margin-top: 34px; display: flex; justify-content: center; padding-left: 0;  list-style: none; border-radius: 0.25rem;
-    .page-link { padding: 6px 0px !important;  border-color: transparent !important; width: 32px;height: 32px;line-height: 1;font-weight: 900; padding: 0; color: $dark01 !important;}
+    .page-link { padding: 6px 0px !important;  border-color: transparent !important; width: 32px;height: 32px;line-height: 1;font-weight: 900; padding: 0; color: $dark01 !important;
+        &:hover {background: transparent !important;}
+    }
     .page-item { font-weight: 900; font-size: 14px;  margin: 0 9px;
         &:first-child,&:last-child {display: none;}
         &:nth-child(2),&:nth-last-child(2) {margin: 0;}
