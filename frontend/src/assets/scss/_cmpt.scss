@@ -108,6 +108,15 @@ button.disabled, a.disabled {opacity: 0.3; cursor: auto;}
 .page-result {margin-top: 27px;}  
 
 
+//breadcrumbs
+.breadcrumbs {
+     > li {display: inline-block;
+        a {color: $dark04;}
+       .arr {margin: -2px 9px; color: $light02;} 
+    }
+
+}
+
 
 //bootstrap 
 .collapse {display: none;

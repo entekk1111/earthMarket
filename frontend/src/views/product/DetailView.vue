@@ -2,29 +2,60 @@
   <div class="grab">
     <!-- breadcrumbs -->
     <ul class="breadcrumbs">
-      <li><a href="javscript:void(0);">상품목록 </a></li>
-      <li><a href="javscript:void(0);">과일류 </a></li>
+      <li>
+        <a href="javscript:void(0);">상품목록 </a
+        ><IconiFy icon="fa6-solid:angle-right" class="arr" />
+      </li>
+      <li>
+        <a href="javscript:void(0);">과일류 </a
+        ><IconiFy icon="fa6-solid:angle-right" class="arr" />
+      </li>
       <li><a href="javscript:void(0);">딸기 </a></li>
     </ul>
     <!--  //breadcrumbs -->
+
+    <!-- tit-wrap -->
     <div class="tit-wrap">
-      <h2>새콤달콤 설향딸기</h2>
-      <ul class="">
-        <li><a href="javascript:void(0);">공유하기</a></li>
+      <h2 class="cont-tit-normal">새콤달콤 설향딸기</h2>
+
+      <!-- util-group -->
+      <ul class="util-group">
         <li>
-          <a href="javascript:void(0);">저장<strong>40</strong></a>
+          <a href="javascript:void(0);"
+            ><IconiFy icon="mi:share" class="ico" />공유하기</a
+          >
+        </li>
+        <li>
+          <a href="javascript:void(0);"
+            ><IconiFy icon="bx:heart" class="ico ico-save" />저장<strong
+              >40</strong
+            ></a
+          >
         </li>
       </ul>
-    </div>
+      <!-- // util-group -->
 
-    <div class="">
+      <!-- info-grouu  -->
+      <ul class="info-grouup">
+        <li>
+          상품 평점<strong><i class="ico-star"></i>4.7</strong>
+        </li>
+        <li>조회<strong>420</strong></li>
+        <li>2022.03.17. 6:20</li>
+      </ul>
+      <!--  //info-grouu  -->
+    </div>
+    <!--  // tit-wrap -->
+
+    <!--  mid-wrap  -->
+    <div class="mid-wrap">
       <vueSlickCarousel v-bind="slickOptions">
         <div v-for="(d, index) in data1" :key="index">
           <a :href="d.image"> <img :src="d.image" alt="" />{{ d.text }} </a>
         </div>
       </vueSlickCarousel>
-      <!--  -->
-      <div class="info-wrap">
+      <!-- info-group  -->
+      <div class="info-group">
         <strong>18,000원</strong>
         <ul>
           <li><span>판매자</span>달콤팜 4.7</li>
@@ -40,7 +71,9 @@
           </li>
         </ul>
       </div>
+      <!--  //info-group  -->
     </div>
+    <!-- // mid-wrap  -->
   </div>
 </template>
 

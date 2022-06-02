@@ -1,7 +1,23 @@
 @charset "utf-8";
 
+//tit-wrap
+.tit-wrap { position: relative;}
 .cont-tit {font-size: 36px; font-family: 'kangwon'; line-height: 1;}
+.cont-tit-normal {font-size: 28px; margin: 45px 0 28px 0;}
 
+//util-group
+.util-group {
+    li {display: inline-block;margin-left: 33px;
+        a {color: $dark04; font-size: 18px;padding-left: 33px;
+            .ico {font-size: 26px;position: absolute; left: 0;top: -3px;}
+            .ico-save {top: -1px;}
+            strong {padding-left: 9px; color: $dark01;}
+        }
+    }
+}
+.tit-wrap {
+    .util-group {position: absolute; right: 0; top: -1px;}
+}
 
 
 //top-wrap

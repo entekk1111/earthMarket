@@ -150,7 +150,7 @@
         <ul class="contentList">
           <li v-for="productItem in productlist" :key="productItem.num">
             <button type="button" class="btn-like">
-              <IconiFy icon="akar-icons:heart" />
+              <IconiFy icon="bx:heart" />
               <span class="sr-only">좋아요</span>
             </button>
             <div class="img-wrap">
