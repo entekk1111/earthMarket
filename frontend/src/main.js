@@ -3,6 +3,10 @@ import App from "./App.vue";
 import router from "./router";
 import axios from "axios";
 
+//iconify
+import { Icon } from "@iconify/vue2";
+Vue.component("IconiFy", Icon);
+
 //스타일연결
 import style from "./assets/scss/style.scss";
 
