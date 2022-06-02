@@ -1,7 +1,5 @@
 <template>
   <div class="grab">
-
-
     <!-- join-wrap-->
     <form name="form" @submit.prevent="handleLogin">
       <div class="join-wrap layout">
@@ -35,27 +33,26 @@
           <li>
             <label for="phoneNum" class="label-tit">휴대폰 번호</label>
             <div class="input-wrap">
-
-                <input
-                  id="phoneNum"
-                  v-model="initial"
-                  type="text"
-                  placeholder="휴대폰 번호를 입력해주세요"
-                  @input="inputChanged($event)"
-                > 
-                <b-button
-                  v-b-toggle.collapse1
-                  class="btn btn-green-line"
-                  :class="{disabled : isDisabled}"
-                  @click="btnDisabled"
-                >
-                  인증하기
-                </b-button> 
+              <input
+                id="phoneNum"
+                v-model="initial"
+                type="text"
+                placeholder="휴대폰 번호를 입력해주세요"
+                @input="inputChanged($event)"
+              />
+              <b-button
+                v-b-toggle.collapse1
+                class="btn btn-green-line"
+                :class="{ disabled: isDisabled }"
+                @click="btnDisabled"
+              >
+                인증하기
+              </b-button>
             </div>
 
             <!--  pwd-auth -->
             <b-collapse id="collapse1">
-                  <div class="pwd-auth">
+              <div class="pwd-auth">
                 <strong>인증번호를 입력해주세요. </strong>
                 <div class="input-wrap">
                   <label for="authNum"
@@ -69,7 +66,7 @@
                     data-bs-target="#collapse1"
                     aria-expanded="false"
                     aria-controls="collapse1"
-                    :class="{disabled : isDisabled}"
+                    :class="{ disabled: isDisabled }"
                   >
                     확인
                   </button>
@@ -158,24 +155,24 @@ export default {
   name: "joinView",
   data: function () {
     return {
-      isDisabled : true,
+      isDisabled: true,
     };
   },
   methods: {
-    // 휴대폰 인증하기 : input에 내용물 있을 경우 인증하기 버튼 disabled 삭제 / input에 내용문 없을 경우 버튼 disabled 추가  
+    // 휴대폰 인증하기 : input에 내용물 있을 경우 인증하기 버튼 disabled 삭제 / input에 내용문 없을 경우 버튼 disabled 추가
     inputChanged(event) {
-          if(event.target.value.length > 0) { 
-            this.isDisabled = false
-          }else {
-            this.isDisabled = true;
-          }
+      if (event.target.value.length > 0) {
+        this.isDisabled = false;
+      } else {
+        this.isDisabled = true;
+      }
     },
-    // 휴대폰 인증하기 : 드롭다운 된 후 다시 disabeled 
+    // 휴대폰 인증하기 : 드롭다운 된 후 다시 disabeled
     btnDisabled() {
       setTimeout(() => {
-          this.isDisabled = true
-        }, 100);
-    } 
+        this.isDisabled = true;
+      }, 100);
+    },
   },
 };
 </script>
