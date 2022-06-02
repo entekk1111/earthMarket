@@ -91,9 +91,19 @@ button.disabled, a.disabled {opacity: 0.3; cursor: auto;}
         }
 }   
 
-
-.hidden {display: none;}
-.visible {display: block;}
+//pagination
+.pagination {margin-top: 34px; display: flex; justify-content: center; padding-left: 0;  list-style: none; border-radius: 0.25rem;
+    .page-link { padding: 6px 0px !important;  border-color: transparent !important; width: 32px;height: 32px;line-height: 1;font-weight: 900; padding: 0; color: $dark01 !important;}
+    .page-item { font-weight: 900; font-size: 14px;
+        &:first-child,&:last-child {display: none;}
+        &.disabled {opacity: 0.3;}
+        &.active {
+            .page-link {border-radius: 600px; color: $white !important;}
+        }
+       
+    }  
+}    
+.page-result {margin-top: 30px;}  
 
 
 
