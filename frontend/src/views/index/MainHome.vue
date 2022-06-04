@@ -25,4 +25,7 @@ export default {
 
 <style lang="scss">
 @import "~@/assets/scss/main.scss";
+.header {
+  margin-bottom: 0;
+}
 </style>

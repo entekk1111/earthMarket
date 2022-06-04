@@ -1,8 +1,6 @@
 
 @charset "utf-8";
-.container  {
-    > .grab {margin-top: 48px;}
-}
+
 @media(max-width: 1800px) {
     #container {padding-right: 15px; padding-left: 15px;}
 }
@@ -16,7 +14,7 @@
 
 
 //header
-.header {padding: 22px 0;border-bottom: 1px solid #E5E7E9;
+.header { margin-bottom: 48px;  padding: 22px 0;border-bottom: 1px solid #E5E7E9;
     .grab, .gnb, .link-join {display: flex;  align-items: center;}
     .grab {position: relative;
         .gnb { margin-left: 47px;

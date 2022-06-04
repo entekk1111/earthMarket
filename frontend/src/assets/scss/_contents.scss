@@ -47,15 +47,8 @@
             }
             .item {width: 100%; height: 89px; position: relative; cursor: pointer; border-radius: 4px; overflow: hidden;
                 img {@include img();}
-            
             }
-            // .slick-list {
-            //     margin-bottom:-15px;
-            // }
-            
-            // .slick-slide {
-            //     margin-bottom: 15px;
-            // }
+
         }
     }
 
@@ -75,7 +68,27 @@
 }
 
 
+//bottom-wrap
+.bottom-wrap {position: relative;
 
+}
+
+
+//tab-wrap 
+.tab-wrap  {
+    .tab-menu { font-size: 20px; font-weight: 900;  border-bottom: 1px solid $light02; text-align: left;
+        li {display: inline-block; padding: 15px;
+            &:first-child {padding-left: 0;}
+            &.active {
+                button {color: $primary;}
+            }
+            button {font-size: 20px; font-weight: 900; }
+        }
+    }
+    .tab-content {
+        text-align: left; padding-top: 67px;
+    }
+}
 
 
 

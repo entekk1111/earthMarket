@@ -8,7 +8,7 @@ const routes = [
   {
     path: "/",
     name: "home",
-    component: () => import("../views/MainHome.vue"),
+    component: () => import("../views/index/MainHome.vue"),
   },
 
   //**** 상품 product ***

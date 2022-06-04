@@ -149,14 +149,14 @@
         </div>
         <ul class="contentList">
           <li v-for="productItem in productlist" :key="productItem.num">
-            <button type="button" class="btn-like">
-              <IconiFy icon="bx:heart" />
-              <span class="sr-only">좋아요</span>
-            </button>
-            <div class="img-wrap">
-              <img :src="productItem.photo" alt="" />
-            </div>
             <a href="/list/detail?productCode=0" class="txt-wrap">
+              <button type="button" class="btn-like">
+                <IconiFy icon="bx:heart" />
+                <span class="sr-only">좋아요</span>
+              </button>
+              <div class="img-wrap">
+                <img :src="productItem.photo" alt="" />
+              </div>
               <span class="tag">{{ productItem.tag }}</span>
               <p class="tit">{{ productItem.tit }}</p>
               <span class="price">{{ productItem.price }}원</span>
