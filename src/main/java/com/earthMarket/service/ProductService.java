@@ -2,13 +2,22 @@ package com.earthMarket.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.earthMarket.mapper.ProductMapper;
 import com.earthMarket.vo.ProductVO;
 
+import lombok.RequiredArgsConstructor;
+
 @Service
+@RequiredArgsConstructor
 public class ProductService {
+	
+	@Autowired
+	ProductMapper productMapper;
 	
 	public List<ProductVO> getProductList() {
 		List<ProductVO> list = new ArrayList<ProductVO>();
@@ -25,5 +34,10 @@ public class ProductService {
 		}
 		
 		return list; 
+	}
+	
+	public int addProduct(Map<String, Object> paramMap) {
+//		productMapper.addProduct(paramMap);
+		return 0; 
 	}
 }

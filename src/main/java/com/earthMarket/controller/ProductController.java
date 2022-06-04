@@ -13,12 +13,15 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.List;
+import java.util.Map;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -140,5 +143,12 @@ public class ProductController {
        }
        return value;
    }
+	
+	@PostMapping("/addProduct")
+	@ResponseBody
+	public int addProduct(@RequestBody Map<String, Object> paramMap) {
+		System.out.println(paramMap);
+		return productService.addProduct(paramMap);
+	}
 	
 }

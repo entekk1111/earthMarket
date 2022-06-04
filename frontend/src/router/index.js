@@ -14,6 +14,12 @@ const routes = [
   //**** 상품 product ***
   //상품리스트
   {
+    path: "/write",
+    name: "write",
+    component: () => import("../views/product/WriteView.vue"),
+  },
+  //상품리스트
+  {
     path: "/list",
     name: "list",
     component: () => import("../views/product/ListView.vue"),
