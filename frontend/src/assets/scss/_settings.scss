@@ -35,13 +35,11 @@ $circle_radius : 100%;
 
 
 /** mixin **/
+@mixin img { position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%); max-width: none; height: 100%; width: auto; min-width: 100%;}
 @mixin relative {position: relative;}
 @mixin deco_line($w,$h,$color,$top, $left) { content: ""; display: block; width: #{$w}px; height: #{$h}px; background: $color; position: absolute; top:#{$top}px; left: #{$left}px;}
 @mixin box_shadow($h, $v, $distance, $opacity) {box-shadow: #{$h}px #{$v}px #{$distance}px rgba(0, 0, 0, $opacity);}
 @mixin display_mode($mode: inline-block) {display: $mode;}
-@mixin clear {
-    &::after { content: '';display: block;clear: both; }
-}
 @mixin center_flex {display: flex; justify-content: center; align-items: center;}
 @mixin border($width,  $color) {
     border: #{$width}px solid $color;
@@ -54,6 +52,51 @@ $circle_radius : 100%;
 @mixin link_space {display: inline-block; width:100%; height: 100%;}
 @mixin pseudo {content: "";display: block;position: absolute; }
 @mixin transition { transition: all 0.3s ease;}
+@mixin clear {
+    &::after { content: '';display: block;clear: both; }
+}
+@mixin ellipsis($line: 1) {
+    @if ($line == 1) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    } @else {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $line;
+    }
+}
+@mixin background($url, $x, $y, $width, $height) {
+    background-image: url($url);
+    background-position: ($x) ($y);
+    background-size: $width $height;
+}
+
+/* media-query */
+$devices: (
+  mobile: 320px,
+  tablet: 768px,
+  desktop: 1280px
+);
+
+@mixin mq($device) {
+    @if map-has-key($devices, $device) {
+    $device-width: map-get($devices, $device);
+    @media screen and (min-width: #{$device-width}) {
+        @content;
+    }
+    } @else {
+        @warn 'Invalid breakpoint: #{$device}.';
+    }
+}
+
+@mixin inline-block-box($vertical-align: top) {
+    display: inline-block;
+    vertical-align: $vertical-align;
+}
+
 
 /* button */
 @mixin button-bg($bg, $bg_hover, $color, $border_color) {
@@ -79,10 +122,6 @@ $num : 7;
 		}
 	}
 }
-// @for $i  from 1 to 2 {
-//     .ico#{$i} {background-image: url(ico#{$i}.png)}
-// }
-
 
 
 /*** common ***/
