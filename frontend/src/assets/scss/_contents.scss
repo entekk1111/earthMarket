@@ -70,25 +70,14 @@
 
 //bottom-wrap
 .bottom-wrap {position: relative;
-
-}
-
-
-//tab-wrap 
-.tab-wrap  {
-    .tab-menu { font-size: 20px; font-weight: 900;  border-bottom: 1px solid $light02; text-align: left;
-        li {display: inline-block; padding: 15px;
-            &:first-child {padding-left: 0;}
-            &.active {
-                button {color: $primary;}
-            }
-            button {font-size: 20px; font-weight: 900; }
+    .tab-menu {
+        .btn-link {position: absolute; right: 0;top: 50%; display: block; margin-top: -12px;color: $dark04;
+            .ico {position: relative; top: 3px; margin-right: 5px;}
         }
     }
-    .tab-content {
-        text-align: left; padding-top: 67px;
-    }
+    
 }
+
 
 
 

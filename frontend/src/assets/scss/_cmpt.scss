@@ -91,6 +91,39 @@ button.disabled, a.disabled {opacity: 0.3; cursor: auto;}
         }
 }   
 
+//dropdown 
+.aselect {
+    ul {position: absolute;}
+    .hidden {
+        visibility: hidden;
+    }
+    .visible {
+        visibility: visible;
+    }
+}
+
+
+//tab-wrap 
+.tab-wrap  {
+    .tab-menu {  font-size: 20px; font-weight: 900;  border-bottom: 1px solid $light02; text-align: left;
+        .grab {position: relative; }
+        .menu {display: inline-block; padding: 15px;font-size: 20px; font-weight: 900; 
+            &:after {content: ""; display: block; width: 100%; height: 5px; background: $primary;  position: absolute; bottom: -1px; left:0; @include transition();transform: scale(0, 1);}
+            &.active {color: $primary; position: relative;@include transition();
+                &:after { transform: scale(1, 1);}
+            }
+            &:hover {color: $primary;
+                &::after {transform: scale(1, 1);}
+            }
+        }
+        .btn-link {display: none;}
+    }
+    .tab-content {
+        text-align: left; padding-top: 67px;
+    }
+}
+
+
 //pagination
 .pagination {margin-top: 34px; display: flex; justify-content: center; padding-left: 0;  list-style: none; border-radius: 0.25rem;
     .page-link { padding: 6px 0px !important;  border-color: transparent !important; width: 32px;height: 32px;line-height: 1;font-weight: 900; padding: 0; color: $dark01 !important;

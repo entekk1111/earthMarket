@@ -106,7 +106,6 @@
     <!--  bottom-wrap -->
     <div class="bottom-wrap">
       <TabComp />
-      <a href="javascript:void(0);">판매자신고</a>
     </div>
     <!-- // bottom-wrap -->
   </div>
