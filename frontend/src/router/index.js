@@ -31,6 +31,13 @@ const routes = [
     component: () => import("../views/product/DetailView.vue"),
   },
 
+  // *** 채팅하기  ***
+  {
+    path: "/chat",
+    name: "chat",
+    component: () => import("../views/chat/ChatView.vue"),
+  },
+
   // *** login  ***
   //회원가입
   {
