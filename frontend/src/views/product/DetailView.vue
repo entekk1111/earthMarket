@@ -96,7 +96,7 @@
               </ul>
             </li>
           </ul>
-          <a href="/chat" class="btn btn-green">판매자 채팅</a>
+          <a href="/chat " class="btn btn-green">판매자 채팅</a>
         </div>
         <!--  //info-group  -->
       </div>

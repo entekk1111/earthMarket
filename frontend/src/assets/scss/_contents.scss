@@ -64,6 +64,7 @@
                 }
             }
         }
+        .btn-green {display: block;}
     }
 }
 
@@ -80,6 +81,47 @@
 
 
 
+
+//chat-wrap 
+.chat-wrap {@include clear(); height: calc(100vh - 78px);
+    > * {float: left;}
+    .tit-group {border-bottom: 1px solid $light02; position: relative;padding: 22px 17px;
+        .btn-group {position: absolute; right: 0; top: 0;}
+    }
+    .section-left, .section-right {height: 100%;}
+    .section-left {width: 325px; border-right: 1px solid $light02;
+        > ul {
+            > li {border-bottom: 1px solid $light02;
+                a {padding: 24px 15px;display: block;
+                    .profile-group {display: flex;align-items: center; position: relative;
+                        .profile-img {position: relative; margin-right: 15px;  width: 40px; height: 40px; border-radius: 100%; overflow: hidden;
+                            img {@include img();}
+                        }
+                        strong {font-weight: 900; color: $dark01;margin-right: 5px;}
+                        span {font-size: 14px; @include ellipsis();width: 130px;}
+                        em { position: absolute; right: 0; font-size: 12px; color: $white; text-align: center;  width: 24px; height: 24px; background: $accent02; font-weight: 900; border-radius: 600px;}
+                    }
+                    .txt-group { display: flex;
+                        * {font-size: 14px;}
+                        p { @include ellipsis(); color: $dark03; padding-right: 25px;}
+                        span {color: $light01;white-space: nowrap;}
+                    }
+                }  
+            }
+        }
+    }
+    .section-right {width: calc(100% - 325px);
+        .tit-group {
+            .btn-group {position: absolute; right: 15px; top: 50%; margin-top: -25px;}
+        }
+        .chat-body {padding: 15px; 
+            .chat-cont {  height: calc(100vh - 260px); overflow-y: auto; @include hideScrollbar();}
+            .chat-input { position: fixed; bottom: 20px;   width: calc(100% - 355px);
+                a {color: $secondary; position: absolute; right: 25px;top: 50%;margin-top: -12px;}
+            }
+        }   
+    }
+}
 
 
 

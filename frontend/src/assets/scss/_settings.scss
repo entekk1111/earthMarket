@@ -55,6 +55,11 @@ $circle_radius : 100%;
 @mixin clear {
     &::after { content: '';display: block;clear: both; }
 }
+@mixin hideScrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    &::-webkit-scrollbar {display: none;}
+}
 @mixin ellipsis($line: 1) {
     @if ($line == 1) {
         overflow: hidden;
