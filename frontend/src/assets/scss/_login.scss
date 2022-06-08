@@ -41,7 +41,7 @@ html, body, #container,.grab,.login-wrap {height: 100%;}
     //form-group
     .form-group {
         ul>li {margin-bottom: 24px; }
-        .btn { font-size: 18px;} 
+        .btn { font-size: 18px; display: block;} 
     }
     //find-group
     .find-group {
@@ -85,7 +85,7 @@ html, body, #container,.grab,.login-wrap {height: 100%;}
             } 
         }  
     }
-    >.btn {margin-top: 60px; font-size: 18px;}
+    >.btn {margin-top: 60px; font-size: 18px; display: block;}
     .txt-bottom {
         text-align: center; margin-top: 60px;
         a {color: $dark02; text-decoration: underline; font-weight: 600; margin-left: 17px;}
