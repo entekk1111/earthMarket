@@ -120,7 +120,7 @@ export default {
         SELLER_ADDR: this.SELLER_ADDR,
         SELLER_DETAIL_ADDR: this.SELLER_DETAIL_ADDR,
         DETAIL_DESC: this.DETAIL_DESC,
-        DELIVER_METHOD: this.DELIVER_METHOD,
+        DELIVER_METHOD: this.DELIVER_METHOD.toString(),
       };
       axios
         .post("/api/product/addProduct", this.form)

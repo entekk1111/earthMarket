@@ -146,8 +146,10 @@ public class ProductController {
 	
 	@PostMapping("/addProduct")
 	@ResponseBody
-	public int addProduct(@RequestBody Map<String, Object> paramMap) {
+	public int addProduct(@RequestBody Map<String, String> paramMap) {
+		//로그인 후에 세션이 있는 회원번호 넣어야함.
 		System.out.println(paramMap);
+		paramMap.put("SELLER_CODE", "0");
 		return productService.addProduct(paramMap);
 	}
 	

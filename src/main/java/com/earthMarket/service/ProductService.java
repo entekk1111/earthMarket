@@ -36,8 +36,8 @@ public class ProductService {
 		return list; 
 	}
 	
-	public int addProduct(Map<String, Object> paramMap) {
-//		productMapper.addProduct(paramMap);
+	public int addProduct(Map<String, String> paramMap) {
+		productMapper.addProduct(paramMap);
 		return 0; 
 	}
 }

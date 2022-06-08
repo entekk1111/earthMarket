@@ -1,4 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.earthMarket.mapper.ProductMapper.xml">
+<mapper namespace="com.earthMarket.mapper.ProductMapper">
+
+<!-- 상품 등록 -->
+<insert id="addProduct" parameterType="map">
+INSERT INTO sale_post_info(
+	SALE_POST_SN
+	, PRODUCT_CATE_SN
+	, SELLER_CODE
+	, TITLE
+	, PER_UNIT
+	, UNIT
+	, PRICE
+	, SELLER_ADDR
+	, SELLER_DETAIL_ADDR
+	, DETAIL_DESC
+	, PIC1_FILE_NAME
+	, PIC2_FILE_NAME
+	, PIC3_FILE_NAME
+	, PIC4_FILE_NAME
+	, PIC5_FILE_NAME
+	, DELIVER_METHOD
+	)VALUES (
+	5
+	, 0
+	, #{SELLER_CODE}
+	, #{TITLE}
+	, #{PER_UNIT}
+	, #{UNIT}
+	, #{PRICE}
+	, #{SELLER_ADDR}
+	, #{SELLER_DETAIL_ADDR}
+	, #{DETAIL_DESC}
+	, #{PIC1_FILE_NAME}
+	, #{PIC2_FILE_NAME}
+	, #{PIC3_FILE_NAME}
+	, #{PIC4_FILE_NAME}
+	, #{PIC5_FILE_NAME}
+	, #{DELIVER_METHOD}
+	)
+</insert>
 </mapper>
