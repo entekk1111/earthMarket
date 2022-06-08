@@ -52,9 +52,9 @@
         @include clear();
         li{ width: calc((100% - 97px) / 4); margin-right: 32px; margin-bottom: 37px; float: left; position: relative;
             &:nth-child(4n) {margin-right: 0;}
-            .btn-like { font-size: 21px;  color: #fff; margin-top: -1px;
-                 width: 21px; height: 21px; position: absolute; right: 16px;
-                top: 18px; z-index: 9;
+            .btn-like { font-size: 21px;  color: #fff; margin-top: -1px;width: 21px; height: 21px; position: absolute; right: 16px;top: 18px; z-index: 9;
+                &.active .ico {background-image:url(../image/board/heart-active.png);}
+                .ico {background: url(../image/board/heart.png) no-repeat; display: inline-block;width: 22px;height: 19px; }
             }
             .img-wrap {
                 height: 240px;

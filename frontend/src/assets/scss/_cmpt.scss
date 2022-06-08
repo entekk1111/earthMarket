@@ -76,7 +76,8 @@ button.disabled, a.disabled {opacity: 0.3; cursor: auto;}
             }
             &.visible,&.show {display: block;}
             .inner { padding: 24px 20px;}
-            .dropdown-item {display: block;}
+            .dropdown-item {display: block;padding: 17px 20px; }
+            
         }
         
         .chbox_wrap  { display: block; margin: 0px;

@@ -32,12 +32,15 @@
           <SortingComp />
         </div>
         <ul class="contentList">
-          <li v-for="productItem in productlist" :key="productItem.num">
+          <li v-for="(productItem, index) in productlist" :key="index">
+            <button
+              type="button"
+              class="btn-like"
+              @click="setActiveItemId(index)"
+            >
+              <i class="ico"><span class="sr-only">좋아요</span></i>
+            </button>
             <a href="/list/detail?productCode=0">
-              <button type="button" class="btn-like">
-                <IconiFy icon="bx:heart" />
-                <span class="sr-only">좋아요</span>
-              </button>
               <div class="img-wrap">
                 <img :src="productItem.photo" alt="" />
               </div>
@@ -81,7 +84,6 @@ export default {
   data: function () {
     return {
       //상품리스트
-      //list: [],
       productlist: [
         {
           photo: require("../../assets/image/board/sample01.jpg"),
@@ -136,6 +138,16 @@ export default {
         .catch((error) => {
           console.log(error);
         });
+    },
+
+    //좋아요 토글
+    setActiveItemId(index) {
+      const element = document.getElementsByClassName("btn-like");
+      if (element[index].classList.contains("active")) {
+        element[index].classList.remove("active");
+      } else {
+        element[index].classList.add("active");
+      }
     },
   },
 };
