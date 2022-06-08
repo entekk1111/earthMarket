@@ -60,7 +60,7 @@ button.disabled, a.disabled {opacity: 0.3; cursor: auto;}
 /* dropdown */
 .select-group { display: flex;
     .dropdown {
-        .dropdown-toggle { border: 1px solid $light02; border-radius: 600px; min-width: inherit; padding: 0 17px; margin-right: 15px;}
+        .dropdown-toggle { min-height: 48px; color: $dark02; border: 1px solid $light02; border-radius: 600px; min-width: inherit; padding: 0 17px; margin-right: 15px;}
         &.show {
             .dropdown-toggle {outline: 2px solid $secondary;color: $secondary;}
             .dropdown-arr {background-position: -14px 0;}
@@ -86,7 +86,7 @@ button.disabled, a.disabled {opacity: 0.3; cursor: auto;}
             input[type=checkbox]:checked + label:before { background-color: $secondary;  }
         }
         .btn-wrap {margin-top: 10px; position: relative; padding: 19px 20px;  border-top: 1px solid $light02;
-            .btn-cancel{
+            .btn-cancel{ color: $dark05;
                 &:before {@include pseudo; bottom: 0; width: 100%;height: 1px; background: $dark01;}
             }
             .btn-green {position: absolute;right: 20px;top: 13px;min-height: inherit;padding: 5px 0;}
