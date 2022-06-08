@@ -61,4 +61,8 @@ export default {
 .header {
   border-bottom: 0;
 }
+.logo {
+  width: 174px;
+  height: 53px;
+}
 </style>
