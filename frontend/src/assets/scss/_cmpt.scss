@@ -110,14 +110,22 @@ button.disabled, a.disabled {opacity: 0.3; cursor: auto;}
 .tab-wrap  {
     .tab-menu {  font-size: 20px; font-weight: 900;  border-bottom: 1px solid $light02; text-align: left;
         .grab {position: relative; }
-        .menu {display: inline-block; padding: 15px;font-size: 20px; font-weight: 900; 
-            &:after {content: ""; display: block; width: 100%; height: 5px; background: $primary;  position: absolute; bottom: -1px; left:0; @include transition();transform: scale(0, 1);}
+        .menu {display: inline-block; padding: 0;font-size: 20px; font-weight: 900; color: $dark04;margin-right: 36px;
+            strong {width: 39px;height: 26px; color: $dark04;background: $light03;  border-radius: 4px; font-size: 16px; font-weight: 600;margin-left: 14px;}
+            span { position: relative; padding-bottom: 15px;
+                &:after {content: ""; display: block; width: 100%; height: 4px; background: $primary;  position: absolute; bottom: -4px; left:0; @include transition();transform: scale(0, 1);}
+            }
             &.active {color: $primary; position: relative;@include transition();
-                &:after { transform: scale(1, 1);}
+                span {
+                    &:after { transform: scale(1, 1);}
+                }
             }
             &:hover {color: $primary;
-                &::after {transform: scale(1, 1);}
+                span {
+                    &::after {transform: scale(1, 1);}
+                }
             }
+            
         }
         .btn-link {display: none;}
     }

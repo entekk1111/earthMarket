@@ -35,8 +35,8 @@
         </ul>
         <!-- // util-group -->
 
-        <!-- info-grouu  -->
-        <ul class="info-grouup">
+        <!-- info-group  -->
+        <ul class="info-group">
           <li>
             상품 평점<strong
               ><IconiFy
@@ -48,7 +48,7 @@
           <li>조회<strong>420</strong></li>
           <li>2022.03.17. 6:20</li>
         </ul>
-        <!--  //info-grouu  -->
+        <!--  //info-group  -->
       </div>
       <!--  // tit-wrap -->
 
@@ -84,7 +84,16 @@
         <div class="info-group">
           <strong class="money">18,000원</strong>
           <ul class="info-list">
-            <li><span>판매자</span><strong>달콤팜 4.7</strong></li>
+            <li>
+              <span>판매자</span
+              ><strong
+                >달콤팜
+                <i class="star-wrap"
+                  ><IconiFy icon="ant-design:star-filled" class="ico-star" />
+                  4.7</i
+                ></strong
+              >
+            </li>
             <li><span>규격</span><strong>4kg</strong></li>
             <li><span>카테고리</span><strong>농산물 / 과일</strong></li>
             <li>

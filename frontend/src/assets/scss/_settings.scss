@@ -138,7 +138,7 @@ html{font-size:16px;}
 	html{font-size:14px;}
 }
 
-html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, button, a, select  { color:#777; padding:0; margin:0; line-height:1.5rem; font-size:1rem; font-weight:300;  letter-spacing: -0.6px; font-family:"ntk", 'open_sans',  'dotum', "돋움", sans-serif; word-break: break-word; -webkit-text-size-adjust:none;}
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, button, a, select  { color:$dark01; padding:0; margin:0; line-height:1.5rem; font-size:1rem; font-weight:300;  letter-spacing: -0.6px; font-family:"ntk", 'open_sans',  'dotum', "돋움", sans-serif; word-break: break-word; -webkit-text-size-adjust:none;}
 p,a,h1, h2, h3, h4, h5, h6,a, button {transform: skew(-0.1deg);}
 ol, ul, li { list-style:none; }
 h1, h2, h3, h4, h5, h6 {font-size:100%; color:#333;}
@@ -157,6 +157,7 @@ a:active{color: $secondary; }
 a img {border: none;}
 * {margin: 0;padding: 0;box-sizing: border-box;}
 a, span, strong{display: inline-block;}
+i {font-style: normal;}
 /* 드래그시 배경컬러 */
 ::-moz-selection {background:#31aae4; color:#fff;}
 ::selection {background:#31aae4; color:#fff;}

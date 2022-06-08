@@ -9,8 +9,10 @@
           :class="{ active: currentTab === index }"
           @click="currentTab = index"
         >
-          {{ tab.tabMenu }}
-          <strong v-if="tab.isTrue">{{ tab.total }}</strong>
+          <span
+            >{{ tab.tabMenu }}
+            <strong v-if="tab.isTrue">{{ tab.total }}</strong></span
+          >
         </button>
         <a href="javascript:void(0);" class="btn-link"
           ><IconiFy class="ico" icon="bi:flag-fill" />판매자신고</a
