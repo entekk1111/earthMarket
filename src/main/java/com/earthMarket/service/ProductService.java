@@ -36,8 +36,12 @@ public class ProductService {
 		return list; 
 	}
 	
-	public int addProduct(Map<String, String> paramMap) {
-		productMapper.addProduct(paramMap);
+	public List<Map<String, Object>> getProduct1stCategory(){
+		return productMapper.getProduct1stCategory();
+	}
+	
+	public int productInsert(Map<String, String> paramMap) {
+		productMapper.productInsert(paramMap);
 		return 0; 
 	}
 }

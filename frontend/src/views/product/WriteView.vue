@@ -5,7 +5,13 @@
         상품종류
         <select name="PRODUCT_CATE" id="">
           <option value="">상품 종류 선택</option>
-          <option value="A">과채류</option>
+          <option
+            v-for="(item, index) in largeCateOptions"
+            :key="index"
+            value="item.LARGE_CATE_NAME"
+          >
+            {{ item.LARGE_CATE_NAME }}
+          </option>
         </select>
         <input
           type="text"
@@ -45,7 +51,7 @@
       <div>
         판매자 주소 <button type="button">주소 가져오기</button>
         <input type="text" name="SELLER_ADDR" v-model="SELLER_ADDR" />
-        <button type="button">주소 찾기</button>
+        <button type="button" @click="searchAddr()">주소 찾기</button>
         <input
           type="text"
           name="SELLER_DETAIL_ADDR"
@@ -80,6 +86,7 @@
     ><button type="button" @click="addProductFn">등록하기</button>
   </div>
 </template>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
 import axios from "axios";
 export default {
@@ -96,9 +103,22 @@ export default {
       DETAIL_DESC: "",
       DELIVER_METHOD: [],
       form: "",
+      largeCateOptions: "",
     };
   },
+  mounted() {
+    axios
+      .get("/api/product/getProduct1stCategory")
+      .then((data) => {
+        console.log(data.data);
+        this.largeCateOptions = data.data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  },
   methods: {
+    //상품등록
     addProductFn() {
       if (!this.PRODUCT_CATE_SN) {
         alert("카테고리를 입력해주세요.");
@@ -123,13 +143,21 @@ export default {
         DELIVER_METHOD: this.DELIVER_METHOD.toString(),
       };
       axios
-        .post("/api/product/addProduct", this.form)
+        .post("/api/product/productInsert", this.form)
         .then((succese) => {
           console.log(succese);
         })
         .catch((error) => {
           console.log(error);
         });
+    },
+    searchAddr() {
+      new window.daum.Postcode({
+        oncomplete: function (data) {
+          // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
+          // 예제를 참고하여 다양한 활용법을 확인해 보세요.
+        },
+      }).open();
     },
   },
 };

@@ -2,8 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.earthMarket.mapper.ProductMapper">
 
+<!-- 대분류 가져오기 -->
+<select id="getProduct1stCategory" resultType="map">
+SELECT
+p.LARGE_CATE_NAME
+,p.DEPTH
+FROM product_cate_info AS p
+GROUP BY p.LARGE_CATE_NAME, p.DEPTH 
+ORDER BY p.DEPTH ASC
+</select>
+
 <!-- 상품 등록 -->
-<insert id="addProduct" parameterType="map">
+<insert id="productInsert" parameterType="map">
 INSERT INTO sale_post_info(
 	SALE_POST_SN
 	, PRODUCT_CATE_SN

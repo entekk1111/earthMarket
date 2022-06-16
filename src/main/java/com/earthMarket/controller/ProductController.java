@@ -46,6 +46,16 @@ public class ProductController {
 		return productService.getProductList();
 	}
 	
+	/**
+	 * @todo 카테고리 가져오기
+	 * @return List<Map<String, Object>>
+	 * */
+	@ResponseBody
+	@GetMapping("/getProduct1stCategory")
+	public List<Map<String, Object>> getProduct1stCategory() {
+		return productService.getProduct1stCategory();
+	}
+	
 //	@ResponseBody
 //	@GetMapping("/getAddr")
 //	public Map<String, Object> getAddr(String x, String y) {
@@ -144,13 +154,13 @@ public class ProductController {
        return value;
    }
 	
-	@PostMapping("/addProduct")
+	@PostMapping("/productInsert")
 	@ResponseBody
-	public int addProduct(@RequestBody Map<String, String> paramMap) {
+	public int productInsert(@RequestBody Map<String, String> paramMap) {
 		//로그인 후에 세션이 있는 회원번호 넣어야함.
 		System.out.println(paramMap);
 		paramMap.put("SELLER_CODE", "0");
-		return productService.addProduct(paramMap);
+		return productService.productInsert(paramMap);
 	}
 	
 }
