@@ -4,19 +4,19 @@
     <section class="section-left">
       <h2 class="tit-group">채팅</h2>
       <ul>
-        <li v-for="chatList in chatLists" :key="chatList">
+        <li v-for="chatNavList in chatNavLists" :key="chatNavList">
           <a href="javascript:void(0);">
             <div class="profile-group">
               <div class="profile-img">
-                <img :src="chatList.photo" alt="" />
+                <img :src="chatNavList.photo" alt="" />
               </div>
-              <strong>{{ chatList.profileName }}</strong>
-              <span>{{ chatList.productTit }}</span>
-              <em>{{ chatList.chatNum }}</em>
+              <strong>{{ chatNavList.profileName }}</strong>
+              <span>{{ chatNavList.productTit }}</span>
+              <em>{{ chatNavList.chatNum }}</em>
             </div>
             <div class="txt-group">
-              <p>{{ chatList.chatTxt }}</p>
-              <span>{{ chatList.chatDate }}</span>
+              <p>{{ chatNavList.chatTxt }}</p>
+              <span>{{ chatNavList.chatDate }}</span>
             </div>
           </a>
         </li>
@@ -44,40 +44,36 @@
         <div class="chat-cont">
           <span class="date">3월 22일 2022</span>
           <p>시내물 졸졸 님께서 아래 상품에 대한 채팅을 시작하였습니다.</p>
-          <div class="">
-            <img src="" alt="" />
-            <div class=""></div>
-            <a href="javascript:void(0);">상품보기</a>
-          </div>
-          <ul class="chat-list">
-            <li>
-              <div class="with-photo">
+
+          <!--  chat-group -->
+          <div class="chat-list">
+            <div class="chat-item chat-right">
+              <div>
                 <img src="" alt="" />
-                <p>2kg 딸기 주문하고싶습니다. 혹시 직거래 가능하신가요?</p>
-                <span>5:20PM</span>
+                <div class=""></div>
+                <a href="javascript:void(0);">상품보기</a>
               </div>
-            </li>
-            <li>
-              <div class="no-photo">
-                <p>2kg 딸기 주문하고싶습니다. 혹시 직거래 가능하신가요?</p>
-                <span>5:20PM</span>
+
+              <div
+                class="chat"
+                v-for="chatBodyList in chatBodyLists"
+                :key="chatBodyList"
+              >
+                <p>{{ chatBodyList.text }}</p>
+                <span>{{ chatBodyList.time }}{{ chatBodyList.meridiem }}</span>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
 
           <span class="date">3월 23일 2022</span>
-          <ul>
-            <li>
-              <div class="with-photo">
-                <img src="" alt="" />
-              </div>
-            </li>
-            <li>
-              <div class="no-photo">
+
+          <div class="chat-item">
+            <ul class="chat-list chat-right">
+              <li>
                 <p>2kg 딸기 주문하고싶습니다. 혹시 직거래 가능하신가요?</p>
-              </div>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
 
           <div class="chat-result result-left">
             <p>
@@ -115,7 +111,7 @@ export default {
   name: "ChatView",
   data: function () {
     return {
-      chatLists: [
+      chatNavLists: [
         {
           photo: require("../../assets/image/board/sample01.jpg"),
           profileName: "딸기노장",
@@ -123,6 +119,22 @@ export default {
           chatNum: "13",
           chatTxt: "직거래하고싶습니다! 연락가능한시간알려주세요",
           chatDate: "어제",
+        },
+        {
+          photo: require("../../assets/image/board/sample01.jpg"),
+          profileName: "딸기노장",
+          productTit: "킹사이즈 딸기 2kg...",
+          chatNum: "13",
+          chatTxt: "직거래하고싶습니다! 연락가능한시간알려주세요",
+          chatDate: "어제",
+        },
+      ],
+
+      chatBodyLists: [
+        {
+          text: "2kg 딸기 주문하고싶습니다. 혹시 직거래 가능하신가요?",
+          time: "5:20",
+          meridiem: "PM",
         },
       ],
     };
@@ -143,7 +155,7 @@ export default {
 }
 .grab {
   max-width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 25px;
+  padding-left: 25px;
 }
 </style>
