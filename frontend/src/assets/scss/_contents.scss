@@ -134,14 +134,16 @@
         .chat-body {padding: 15px; 
             .chat-cont { height: calc(100vh - 260px); overflow-y: auto; @include hideScrollbar();
                 .date {display: block; text-align: center; font-size: 14px; color: $dark03;}
-                .chat-list { @include clear();
-                    .chat-item {
-                        width: 559px;
-                        &.chat-left {float: left;}
-                        &.chat-right {float: right;}
-                        .chat {background: $accent02; border-top-right-radius: 600px; border-top-left-radius: 600px;border-bottom-left-radius: 600px;}
+              
+                    .message-group {
+                        .chat-message { @include clear();
+                            &.mine{
+                                > div {float: right;}
+                            }
+                            .chat {float: right;background: $accent02; border-top-right-radius: 600px; border-top-left-radius: 600px;border-bottom-left-radius: 600px;}
+                        }
                     }
-                }
+              
             }
             .chat-input { position: fixed; bottom: 20px;   width: calc(100% - 355px);
                 a {color: $secondary; position: absolute; right: 25px;top: 50%;margin-top: -12px;}

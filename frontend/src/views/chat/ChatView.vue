@@ -42,18 +42,16 @@
       <!-- chat-body -->
       <div class="chat-body">
         <div class="chat-cont">
-          <span class="date">3월 22일 2022</span>
-          <p>시내물 졸졸 님께서 아래 상품에 대한 채팅을 시작하였습니다.</p>
-
-          <!--  chat-group -->
-          <div class="chat-list">
-            <div class="chat-item chat-right">
+          <!-- message-group -->
+          <div class="message-group">
+            <span class="date">3월 22일 2022</span>
+            <p>시내물 졸졸 님께서 아래 상품에 대한 채팅을 시작하였습니다.</p>
+            <div class="chat-message mine">
               <div>
                 <img src="" alt="" />
                 <div class=""></div>
                 <a href="javascript:void(0);">상품보기</a>
               </div>
-
               <div
                 class="chat"
                 v-for="chatBodyList in chatBodyLists"
@@ -64,6 +62,7 @@
               </div>
             </div>
           </div>
+          <!--  // message-group -->
 
           <span class="date">3월 23일 2022</span>
 
