@@ -1,6 +1,4 @@
 @charset "utf-8";
-@import "_settings.scss";
-
 
 //search-wrap
 .search-wrap {width: 297px; position: absolute;right: 0; top: -5px;
@@ -16,9 +14,6 @@
     .toggle-button-wrap {float: right;}
     label {color: $dark02;}
 }
-
-
-
 
 
 //toggle-button-wrap

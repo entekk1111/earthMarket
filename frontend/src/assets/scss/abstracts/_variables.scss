@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/** variables **/
+//brand color 
+$primary : #1887ED;
+$primary_hover : #1073D1;
+$primary_50 : rgba(24, 135, 237, 0.05);
+$secondary : #0FAC27;
+$secondary_hover : #0D9622;
+$secondary_50 : rgba(15, 172, 39, 0.05);
+$white : #fff;
+
+//accent color
+$accent01 : #FF7D16;
+$accent02 :  #FFC033;
+
+//dark color 
+$dark01 : #070707;
+$dark02 : #353535;
+$dark03 : #4F4F4F;
+$dark04 : #828282;
+$dark05 : #000;
+
+//light color 
+$light01 :  #BDBDBD;
+$light02 :  #E0E0E0;
+$light03 :  #F2F2F2;
+$light04 :  #F7F7F7;
+//state color 
+$error : #F02222;
+//border-radius
+$border_radius : 15px; 
+$circle_radius : 100%;
+
+// responsive 
+$devices: (
+  mobile_480: 480px,  
+  mobile_780: 780px,
+  tablet_1024: 1024px,
+  tablet_1200: 1200px,
+  desktop_1800: 1800px
+);

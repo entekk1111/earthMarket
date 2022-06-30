@@ -1,0 +1,116 @@
+/** mixin **/
+//responsive 
+// @include mobile_480 {}
+// @include mobile_780 {}
+// @include tablet_1024 {}
+// @include tablet_1200 {}
+// @include desktop_1800 {}
+@mixin mq($device) {
+    @if map-has-key($devices, $device) {
+      $device-width: map-get($devices, $device);
+      @media screen and (min-width: #{$device-width}) {
+        @content;
+      }
+    } @else {
+      @warn 'Invalid breakpoint: #{$device}.';
+    }
+  }
+
+//font @include font(14px, $dark04, 'bold');
+@mixin font($size: false, $color: false, $weight: false) {
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
+  }
+	@if ($weight == bold) {	
+		font-weight: 900;
+   	}	
+    @else if $weight == 'medium' {
+		font-weight: 600;
+	}
+	@else if $weight == 'light' {
+		font-weight: 100;
+	}
+}
+
+//clear  @include clear();
+@mixin clear {
+    &::after { content: '';display: block;clear: both; }
+}
+
+//ellipsis   width: 300px; @include ellipsis; / @include ellipsis(2);
+@mixin ellipsis($type: 0) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+   @if($type == 0) {
+      white-space: nowrap;
+      word-wrap: normal;
+      word-wrap: break-word;
+    }@else {
+      display: -webkit-box;
+      -webkit-line-clamp: $type;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+//border @border(1, red)
+@mixin border($width,  $color) {
+    border: #{$width}px solid $color;
+}
+
+@mixin img { position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%); max-width: none; height: 100%; width: auto; min-width: 100%;}
+@mixin relative {position: relative;}
+@mixin deco_line($w,$h,$color,$top, $left) { content: ""; display: block; width: #{$w}px; height: #{$h}px; background: $color; position: absolute; top:#{$top}px; left: #{$left}px;}
+@mixin box_shadow($h, $v, $distance, $opacity) {box-shadow: #{$h}px #{$v}px #{$distance}px rgba(0, 0, 0, $opacity);}
+@mixin display_mode($mode: inline-block) {display: $mode;}
+@mixin center_flex {display: flex; justify-content: center; align-items: center;}
+
+@mixin background($filename, $x, $y, $width, $height) {
+    background-image: url(../image/#{$filename});
+    background-position: ($x) ($y);
+    background-size: $width $height;
+}
+@mixin link_space {display: inline-block; width:100%; height: 100%;}
+@mixin pseudo {content: "";display: block;position: absolute; }
+@mixin transition { transition: all 0.3s ease;}
+
+@mixin hideScrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    &::-webkit-scrollbar {display: none;}
+}
+
+
+
+@mixin inline-block-box($vertical-align: top) {
+    display: inline-block;
+    vertical-align: $vertical-align;
+}
+
+
+/* button */
+@mixin button-bg($bg, $bg_hover, $color, $border_color) {
+    background: $bg;color: $color; border: 1px solid $border_color;
+    &:link, &:visited {color: $color;}
+    &:hover,  &:active {background:$bg_hover;}
+}
+@mixin button-line($bg, $bg_hover, $color, $border_color) {
+    background: $bg;color: $color; border: 1px solid $border_color;
+    &:link, &:visited {color: $color;}
+    &:hover,  &:active {background:$bg_hover;}
+}
+
+//background-image
+$show-numbers:true;
+$num : 7;
+.item{
+        @if $show-numbers {
+		@for $i from 1 through $num {
+			&:nth-child(#{$i}){
+				background:url('http://lorempixel.com/300/300/sports/#{$i}') no-repeat 0 0;
+			}
+		}
+	}
+}

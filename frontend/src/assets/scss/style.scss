@@ -1,11 +1,32 @@
+//abstracts
+@import "abstracts/variables";
+@import "abstracts/mixin";
 
-@import "_settings.scss";
-@import "_font.scss";
-@import "_cmpt.scss";
-@import "_layout.scss";
-@import "_contents.scss";
-@import "_board.scss"; //상품모아보기
-@import "_login.scss"; //로그인, 회원가입, 아이디/비밀번호찾기
+//base
+@import "base/common";
+@import "base/font";
+@import "base/reset";
+
+//componenets
+@import "componenets/breadcrumbs";
+@import "componenets/buttons";
+@import "componenets/checkBox";
+@import "componenets/dropdown";
+@import "componenets/form";
+@import "componenets/pagination";
+@import "componenets/tab";
+
+//layout
+@import "layout/footer";
+@import "layout/header";
+
+//pages
+@import "pages/board";
+@import "pages/chat";
+@import "pages/contents";
+@import "pages/login";
+
+
 
 
 

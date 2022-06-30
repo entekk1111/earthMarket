@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+/* align */
+.center_margin {margin: 0 auto;}
+.center_flex_ver { display: flex; justify-content: center; align-items: center;}
+
+//validity
+.validity {display: block;display: none; color:$error; margin-top: 7px;font-size: 0.9rem;}
+
+// highlight
+.highlight {color: $dark03; font-weight: 900;   margin-bottom: 15px; font-size: 14px;}
+
+//bootstrap 
+.collapse {display: none;
+	&.show{ display: block;}
+}
+.collapsing { position: relative;height: 0; overflow: hidden; transition: height .35s ease;}
+

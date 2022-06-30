@@ -1,0 +1,17 @@
+/*chbox*/
+.chbox_wrap {
+    position: relative; display: inline-block;  margin: 3px 10px 3px 0; 
+    input {
+    &[type=checkbox], &[type=radio] { position: absolute;outline: none;filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0;z-index: -9;}
+    &[type=checkbox][disabled], &[type=radio][disabled], &[type=checkbox][disabled] + label, &[type=radio][disabled] + label { cursor: not-allowed;}
+    &[type=checkbox][disabled] + label:before, &[type=radio][disabled] + label:before { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);opacity: 0.5; }
+    &[type=checkbox]:focus + label:before, &[type=radio]:focus + label:before {box-shadow: 0 0 0 0.2rem rgba(0, 37, 76, 0.25);}
+    &[type=checkbox]:checked + label:after {background: transparent; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; border-color: $white; }
+    &[type=checkbox] + label, &[type=radio] + label {
+        cursor: pointer; padding-left: 39px; color: $dark03;
+        .txt { width: calc(100% - 50px);}
+    }   
+    &[type=checkbox] + label:before, &[type=radio] + label:before {position: absolute; left: 0; top: 50%; margin-top: -19px;  content: '';  border-radius: 5px; background: $white;  width: 24px;height: 24px; display: block;border: 1px solid #cdcdcd;}
+    &[type=checkbox]:checked + label:before, &[type=radio]:checked + label:before {background: $primary url(../image/checkbox.png) no-repeat center;border: 0;}
+    }
+}

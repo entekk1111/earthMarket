@@ -43,36 +43,218 @@
       <div class="chat-body">
         <div class="chat-cont">
           <!-- message-group -->
-          <div class="message-group">
-            <span class="date">3월 22일 2022</span>
-            <p>시내물 졸졸 님께서 아래 상품에 대한 채팅을 시작하였습니다.</p>
+          <div
+            class="message-group"
+            v-for="message in messageList"
+            :key="message"
+          >
+            <span class="date"
+              >{{ message.month }}월 {{ message.date }}일
+              {{ message.year }}</span
+            >
+
+            <!-- chat-message  -->
             <div class="chat-message mine">
-              <div>
-                <img src="" alt="" />
-                <div class=""></div>
-                <a href="javascript:void(0);">상품보기</a>
-              </div>
-              <div
-                class="chat"
-                v-for="chatBodyList in chatBodyLists"
-                :key="chatBodyList"
-              >
-                <p>{{ chatBodyList.text }}</p>
-                <span>{{ chatBodyList.time }}{{ chatBodyList.meridiem }}</span>
+              <div class="inner">
+                <p class="notice-message">
+                  {{ message.user }}님께서 아래 상품에 대한 채팅을
+                  시작하였습니다.
+                </p>
+                <div class="card-info">
+                  <div class="profile-wrap">
+                    <div class="profile-img">
+                      <img :src="message.photo" alt="" />
+                    </div>
+                    <div class="txt">
+                      <span>달콤팜</span>
+                      <p>새콤달콤 설향딸기</p>
+                      <strong>4,2000원</strong>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0);" class="btn btn-green-line"
+                    >상품보기</a
+                  >
+                </div>
+                <div class="message">
+                  <span class="time"
+                    >{{ message.time }}{{ message.meridiem }}</span
+                  >
+                  <p class="chat">{{ message.text }}</p>
+                </div>
               </div>
             </div>
+            <!-- // chat-message  -->
+
+            <!-- chat-message  -->
+            <div class="chat-message other">
+              <div class="inner">
+                <div class="message">
+                  <div class="profile-img">
+                    <img :src="message.photo" alt="" />
+                  </div>
+                  <p class="chat">{{ message.text }}</p>
+                  <span class="time"
+                    >{{ message.time }}{{ message.meridiem }}</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- //  chat-message  -->
+            <!-- chat-message  -->
+            <div class="chat-message other">
+              <div class="inner">
+                <div class="message">
+                  <div class="profile-img">
+                    <img :src="message.photo" alt="" />
+                  </div>
+                  <p class="chat">{{ message.text }}</p>
+                  <span class="time"
+                    >{{ message.time }}{{ message.meridiem }}</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- //  chat-message  -->
+            <!-- chat-message  -->
+            <div class="chat-message other">
+              <div class="inner">
+                <div class="message">
+                  <div class="profile-img">
+                    <img :src="message.photo" alt="" />
+                  </div>
+                  <p class="chat">{{ message.text }}</p>
+                  <span class="time"
+                    >{{ message.time }}{{ message.meridiem }}</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- //  chat-message  -->
+
+            <!-- chat-message  -->
+            <div class="chat-message mine">
+              <div class="inner">
+                <div class="message">
+                  <span class="time"
+                    >{{ message.time }}{{ message.meridiem }}</span
+                  >
+                  <p class="chat">{{ message.text }}</p>
+                </div>
+              </div>
+            </div>
+            <!-- // chat-message  -->
+            <!-- chat-message  -->
+            <div class="chat-message mine">
+              <div class="inner">
+                <div class="message">
+                  <span class="time"
+                    >{{ message.time }}{{ message.meridiem }}</span
+                  >
+                  <p class="chat">{{ message.text }}</p>
+                </div>
+              </div>
+            </div>
+            <!-- // chat-message  -->
           </div>
           <!--  // message-group -->
 
-          <span class="date">3월 23일 2022</span>
+          <!-- message-group -->
+          <div
+            class="message-group"
+            v-for="message in messageList"
+            :key="message"
+          >
+            <span class="date"
+              >{{ message.month }}월 {{ message.date }}일
+              {{ message.year }}</span
+            >
 
-          <div class="chat-item">
-            <ul class="chat-list chat-right">
-              <li>
-                <p>2kg 딸기 주문하고싶습니다. 혹시 직거래 가능하신가요?</p>
-              </li>
-            </ul>
+            <!-- chat-message  -->
+            <div class="chat-message mine">
+              <div class="inner">
+                <div class="message">
+                  <span class="time"
+                    >{{ message.time }}{{ message.meridiem }}</span
+                  >
+                  <p class="chat">{{ message.text }}</p>
+                </div>
+              </div>
+            </div>
+            <!-- // chat-message  -->
+
+            <!-- chat-message  -->
+            <div class="chat-message other">
+              <div class="inner">
+                <div class="message">
+                  <div class="profile-img">
+                    <img :src="message.photo" alt="" />
+                  </div>
+                  <p class="chat">{{ message.text }}</p>
+                  <span class="time"
+                    >{{ message.time }}{{ message.meridiem }}</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- //  chat-message  -->
+
+            <!-- chat-message  -->
+            <div class="chat-message other">
+              <div class="inner">
+                <div class="message">
+                  <div class="profile-img">
+                    <img :src="message.photo" alt="" />
+                  </div>
+                  <p class="chat">{{ message.text }}</p>
+                  <span class="time"
+                    >{{ message.time }}{{ message.meridiem }}</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- //  chat-message  -->
+            <!-- chat-message  -->
+            <div class="chat-message other">
+              <div class="inner">
+                <div class="message">
+                  <div class="profile-img">
+                    <img :src="message.photo" alt="" />
+                  </div>
+                  <p class="chat">{{ message.text }}</p>
+                  <span class="time"
+                    >{{ message.time }}{{ message.meridiem }}</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- //  chat-message  -->
+
+            <!-- chat-message  -->
+            <div class="chat-message mine">
+              <div class="inner">
+                <div class="message">
+                  <span class="time"
+                    >{{ message.time }}{{ message.meridiem }}</span
+                  >
+                  <p class="chat">{{ message.text }}</p>
+                </div>
+              </div>
+            </div>
+            <!-- // chat-message  -->
+            <!-- chat-message  -->
+            <div class="chat-message mine">
+              <div class="inner">
+                <div class="message">
+                  <span class="time"
+                    >{{ message.time }}{{ message.meridiem }}</span
+                  >
+                  <p class="chat">{{ message.text }}</p>
+                </div>
+              </div>
+            </div>
+            <!-- // chat-message  -->
           </div>
+          <!--  // message-group -->
 
           <div class="chat-result result-left">
             <p>
@@ -128,9 +310,13 @@ export default {
           chatDate: "어제",
         },
       ],
-
-      chatBodyLists: [
+      messageList: [
         {
+          month: "03",
+          date: "22",
+          year: "2022",
+          user: "시내물 졸졸",
+          photo: require("../../assets/image/board/sample01.jpg"),
           text: "2kg 딸기 주문하고싶습니다. 혹시 직거래 가능하신가요?",
           time: "5:20",
           meridiem: "PM",

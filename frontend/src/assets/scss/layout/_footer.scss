@@ -1,0 +1,18 @@
+
+@charset "utf-8";
+
+//footer 
+.footer {border-top: 1px solid #e5e7e9; padding: 30px 0;margin-top: 109px;
+    .grab {
+        display: flex; justify-content: space-between; align-items: center;
+        .menu {display: flex;
+            li{
+                @include relative;
+                &:not(:first-child):after{@include deco_line(1,21,$dark03,3, 18); }
+                a {font-family: 'kangwon';  padding-left: 34px; color:$dark03;
+                    &:hover{text-decoration: underline;}
+                }
+            }
+        }
+    } 
+}
