@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="$route.meta.addClass">
     <Header />
     <div id="container" class="container">
       <router-view />

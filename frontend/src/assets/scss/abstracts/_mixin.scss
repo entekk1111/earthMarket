@@ -1,20 +1,37 @@
+@import "variables";
+
 /** mixin **/
 //responsive 
-// @include mobile_480 {}
-// @include mobile_780 {}
-// @include tablet_1024 {}
-// @include tablet_1200 {}
-// @include desktop_1800 {}
-@mixin mq($device) {
-    @if map-has-key($devices, $device) {
-      $device-width: map-get($devices, $device);
-      @media screen and (min-width: #{$device-width}) {
-        @content;
-      }
-    } @else {
-      @warn 'Invalid breakpoint: #{$device}.';
-    }
+// @include mobile480 {}
+// @include mobile780 {}
+// @include tablet1024 {}
+// @include tablet1200 {}
+// @include desktop1800 {}
+@mixin mobile480 {
+  @media (max-width: #{$mobile480}){
+    @content;
   }
+}
+@mixin mobile780 {
+  @media (max-width: #{$mobile780}) {
+    @content;
+  }
+}
+@mixin tablet1024 {
+  @media (max-width: #{$tablet1024}) {
+    @content;
+  }
+}  
+@mixin tablet1200 {
+  @media (max-width: #{$tablet1200}) {
+    @content;
+  }
+} 
+@mixin desktop1800 {
+  @media (max-width: #{$desktop1800}) {
+    @content;
+  }
+}   
 
 //font @include font(14px, $dark04, 'bold');
 @mixin font($size: false, $color: false, $weight: false) {

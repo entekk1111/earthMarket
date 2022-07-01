@@ -1,5 +1,5 @@
 <template>
-  <div>회원정보</div>
+  <div class="grab">회원정보</div>
 </template>
 
 <script>

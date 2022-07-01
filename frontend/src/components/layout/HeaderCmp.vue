@@ -1,5 +1,5 @@
 <template>
-  <header id="header" class="header" :class="$route.meta.addClass">
+  <header id="header" class="header">
     <div class="grab">
       <!-- logo -->
       <h1 class="logo">

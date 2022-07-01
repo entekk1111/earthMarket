@@ -33,10 +33,8 @@ $border_radius : 15px;
 $circle_radius : 100%;
 
 // responsive 
-$devices: (
-  mobile_480: 480px,  
-  mobile_780: 780px,
-  tablet_1024: 1024px,
-  tablet_1200: 1200px,
-  desktop_1800: 1800px
-);
+$mobile480: 480px;
+$mobile780: 780px;
+$tablet1024: 1024px;
+$tablet1200: 1200px;
+$desktop1800: 1800px;
