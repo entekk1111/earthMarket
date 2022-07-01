@@ -1,5 +1,5 @@
 <template>
-  <header id="header" class="header">
+  <header id="header" class="header" :class="$route.meta.addClass">
     <div class="grab">
       <!-- logo -->
       <h1 class="logo">
@@ -21,8 +21,21 @@
       <!-- util-wrap -->
       <div class="util-wrap">
         <ul class="link-join">
+          <!-- 로그인 전 -->
           <li><router-link to="/join">회원가입</router-link></li>
           <li><router-link to="/login">로그인</router-link></li>
+
+          <!-- 로그인 후 -->
+          <li>
+            <i class="ico">
+              <IconiFy icon="teenyicons:message-text-alt-outline"></IconiFy>
+            </i>
+            <router-link to="/chat"> 채팅</router-link>
+          </li>
+          <li>
+            <i class="ico bg"><IconiFy icon="mi:user" /></i>
+            <router-link to="/mypage/userInfo"> 시냇물졸졸</router-link>
+          </li>
         </ul>
         <a href="/write" class="btn btn-blue">상품올리기</a>
       </div>

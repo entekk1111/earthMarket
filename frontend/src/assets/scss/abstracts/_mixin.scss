@@ -60,11 +60,12 @@
     }
   }
 
-//border @border(1, red)
+// *** border @border(1, red)***
 @mixin border($width,  $color) {
     border: #{$width}px solid $color;
 }
 
+// *** virtual line  ***
 @mixin deco_line_top($w,$h,$color,$top, $left) { 
   content: ""; display: block; width: $w; height: $h; background: $color; position: absolute; top:#{$top}px; left: #{$left}px;
 }
@@ -73,12 +74,26 @@
 }
 
 
+// *** align center  ***
+//flex
+@mixin center_flex {display: flex; justify-content: center; align-items: center;}
+
+//absoulte
+@mixin center_absoulte {position: relative; 
+  > * {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+}
+//inline-block
+@mixin inline-block-box($vertical-align: top) {
+  display: inline-block;
+  vertical-align: $vertical-align;
+}
+
+
 
 @mixin img { position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%); max-width: none; height: 100%; width: auto; min-width: 100%;}
 @mixin relative {position: relative;}
 @mixin box_shadow($h, $v, $distance, $opacity) {box-shadow: #{$h}px #{$v}px #{$distance}px rgba(0, 0, 0, $opacity);}
-@mixin display_mode($mode: inline-block) {display: $mode;}
-@mixin center_flex {display: flex; justify-content: center; align-items: center;}
+
 
 @mixin background($filename, $x, $y, $width, $height) {
     background-image: url(../image/#{$filename});
@@ -97,10 +112,7 @@
 
 
 
-@mixin inline-block-box($vertical-align: top) {
-    display: inline-block;
-    vertical-align: $vertical-align;
-}
+
 
 
 /* button */

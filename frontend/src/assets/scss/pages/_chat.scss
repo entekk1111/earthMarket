@@ -1,3 +1,6 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixin";
+
 //chat-wrap 
 .chat-wrap {@include clear(); height: calc(100vh - 78px);
     > * {float: left;}

@@ -35,6 +35,9 @@ const routes = [
   {
     path: "/chat",
     name: "chat",
+    meta: {
+      addClass: "wide",
+    },
     component: () => import("../views/chat/ChatView.vue"),
   },
 

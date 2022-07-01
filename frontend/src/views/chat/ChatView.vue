@@ -386,20 +386,6 @@ export default {
 };
 </script>
 
-<style lang="scss">
-#header .util-wrap,
-#header .gnb,
-#footer {
-  display: none;
-}
-.header {
-  border-bottom: 0;
-  margin-bottom: 0;
-  border-bottom: 1px solid #e0e0e0;
-}
-.grab {
-  max-width: 100%;
-  padding-right: 25px;
-  padding-left: 25px;
-}
+<style lang="scss" scoped>
+@import "~@/assets/scss/pages/chat";
 </style>

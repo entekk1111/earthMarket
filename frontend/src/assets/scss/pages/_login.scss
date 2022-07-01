@@ -6,7 +6,7 @@ html, body, #container,.grab,.login-wrap {height: 100%;}
 
 //txt
 .tit-style {
-    font-family: 'kangwon'; font-size: 24px; @include display_mode(block);  color: #000; text-align: center;
+    font-family: 'kangwon'; font-size: 24px; display: block;  color: #000; text-align: center;
     &.big {font-size: 36px;}
 }
 .txt-explain {color: $dark03; font-size: 14px; margin-bottom: 15px;}
@@ -20,11 +20,11 @@ html, body, #container,.grab,.login-wrap {height: 100%;}
 
 //sns-group
 .sns-group {
-        margin-top: 63px;text-align: center;border-bottom: 1px solid $light03;  padding-bottom: 47px; margin-bottom: -40px;
+        margin-top: 63px;text-align: center;padding-bottom: 47px; margin-bottom: -40px;
         ul {
             margin-top: 27px;
             li:not(:first-child) {margin-left: 24px;}
-            .ico {@include display_mode; width: 48px; height: 48px; border-radius: $circle_radius; background-image: url('~@/assets/image/ico-sns.png');}
+            .ico {display: inline-block; width: 48px; height: 48px; border-radius: $circle_radius; background-image: url('~@/assets/image/ico-sns.png');}
             .ico02{background-position: 48px 0;}
         }
 }
@@ -45,7 +45,7 @@ html, body, #container,.grab,.login-wrap {height: 100%;}
     //find-group
     .find-group {
         text-align: center; margin-top: 56px;padding-top: 47px; margin-top: 40px;
-        & >* {@include display_mode;}
+        & >* {display: inline-block;}
         li {
             position: relative;
             &:not(:first-child):after { content: ""; display: block; width: 1px; height: 27px; background: $dark04; position: absolute; left: -18px; top: 0;}
@@ -61,8 +61,8 @@ html, body, #container,.grab,.login-wrap {height: 100%;}
 
 
 /*** join 회원가입 ***/
-.join-wrap {
-    padding-bottom: 170px;
+.join-wrap {padding-bottom: 170px;
+    .sns-group {border-bottom: 1px solid $light03;  }
     //form-group
     .form-group {padding-top: 47px; margin-top: 40px;
         > li {

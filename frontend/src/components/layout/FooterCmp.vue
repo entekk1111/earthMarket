@@ -1,5 +1,5 @@
 <template>
-  <footer id="footer" class="footer">
+  <footer id="footer" class="footer" :class="$route.meta.addClass">
     <div class="grab">
       <!--  logo-gray -->
       <a href="/" class="logo-gray">

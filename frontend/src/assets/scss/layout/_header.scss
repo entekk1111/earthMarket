@@ -13,6 +13,7 @@
 .grab { max-width: 1200px;margin: 0 auto;}
 
 
+
 //header
 .header { margin-bottom: 48px;  padding: 22px 0;border-bottom: 1px solid #E5E7E9;
     .grab, .gnb, .link-join {display: flex;  align-items: center;}
@@ -32,9 +33,22 @@
                     a {font-weight: 600;
                         &:hover{text-decoration: underline;}
                     }
+                    .ico.bg {width: 40px;height: 40px;background:$light04; text-align: center;border-radius: 600px;
+                        @include center_absoulte();
+                        @include inline-block-box(middle);
+                    }
+                    .ico {margin-right: 5px; position: relative;top: -1px;}
+                    .iconify  {  @include font(20px, $dark04); vertical-align: middle; }
                 }
             }
         
         }
     }
 }
+
+
+// header gap
+.wide .util-wrap,
+.wide .gnb {display: none;}
+.wide { border-bottom: 0;margin-bottom: 0;border-bottom: 1px solid #e0e0e0;}
+.wide .grab { max-width: 100%; padding-right: 25px; padding-left: 25px;}
