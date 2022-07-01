@@ -35,6 +35,11 @@
 	}
 }
 
+//font medium
+@mixin fontMedium($color: false, $size: false) {
+  font-family: 'ntkLight'; font-weight: 600; color: $color; font-size: $size;
+}
+
 //clear  @include clear();
 @mixin clear {
     &::after { content: '';display: block;clear: both; }
@@ -60,9 +65,17 @@
     border: #{$width}px solid $color;
 }
 
+@mixin deco_line_top($w,$h,$color,$top, $left) { 
+  content: ""; display: block; width: $w; height: $h; background: $color; position: absolute; top:#{$top}px; left: #{$left}px;
+}
+@mixin deco_line_bottom($w,$h,$color,$bottom, $left) { 
+  content: ""; display: block; width: $w; height: $h; background: $color; position: absolute; bottom:#{$bottom}px; left: #{$left}px;
+}
+
+
+
 @mixin img { position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%); max-width: none; height: 100%; width: auto; min-width: 100%;}
 @mixin relative {position: relative;}
-@mixin deco_line($w,$h,$color,$top, $left) { content: ""; display: block; width: #{$w}px; height: #{$h}px; background: $color; position: absolute; top:#{$top}px; left: #{$left}px;}
 @mixin box_shadow($h, $v, $distance, $opacity) {box-shadow: #{$h}px #{$v}px #{$distance}px rgba(0, 0, 0, $opacity);}
 @mixin display_mode($mode: inline-block) {display: $mode;}
 @mixin center_flex {display: flex; justify-content: center; align-items: center;}

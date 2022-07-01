@@ -2,13 +2,24 @@
 .chat-wrap {@include clear(); height: calc(100vh - 78px);
     > * {float: left;}
     .tit-group {border-bottom: 1px solid $light02; position: relative;padding: 22px 25px;font-weight: 900;
-        .btn-group {position: absolute; right: 0; top: 0;}
+        .chat-info {display: inline-block;}
     }
     .section-left, .section-right {height: 100%;}
     .section-left {width: 325px; border-right: 1px solid $light02;
         > ul {height: calc(100vh - 147px); overflow-y: auto; -ms-overflow-style: none;  scrollbar-width: none;  
             &::-webkit-scrollbar {display: none;}
             > li {border-bottom: 1px solid $light02;
+                &.active,&.disabled {
+                    .txt-group {
+                        p {color: $light01;}
+                    } 
+                    .profile-group {
+                        em {display: none;}
+                    }
+                }    
+                &.active {
+                    a {background: $light04;}
+                }
                 a {padding: 16px 22px;display: block;
                     .profile-group {display: flex;align-items: center; position: relative; margin-bottom: 8px;
                         .profile-img {position: relative; margin-right: 11px;  width: 40px; height: 40px; border-radius: 100%; overflow: hidden;
@@ -32,42 +43,60 @@
             .chat-info {
                 span { @include font(14px, $dark04); margin-left: 8px;}
             }
-            .btn-group {position: absolute; right: 15px; top: 50%; margin-top: -25px;}
+            .btn-group {position: absolute; right: 15px; top: 50%; margin-top: -25px;
+                .btn {padding: 8px 5px;}
+                .btn-line-black { margin-right: 25px; }
+            }
         }
-        .chat-body {padding: 15px; 
+        .chat-body {padding: 15px 25px; 
             .chat-cont { height: calc(100vh - 260px); overflow-y: auto; @include hideScrollbar();
-                .date {display: block; text-align: center;  @include font(14px, $dark03);}
+                .date {display: block; text-align: center; font-size: 14px; @include fontMedium($dark03); padding: 21px 0px;}
                     .message-group {
                         .chat-message { @include clear();margin-bottom: 10px;
                             &.mine{
                                 .inner {float: right;}
-                                .chat {background: $accent02; border-bottom-left-radius: 600px;}
-                                .time {margin-right: 8px;}
+                                .chat {background: $accent02; border-bottom-left-radius: 50px;}
+                                .time {padding-right: 15px;}
                             }
                             &.other{
                                 > .inner {float: left;}
-                                .chat {background: $light04 ; border-bottom-right-radius: 600px;}
-                                .time {margin-left: 8px;}
+                                .chat {background: $light04 ; border-bottom-right-radius: 50px;}
+                                .time {padding-left: 15px;}
                             }
-                            .chat {border-top-right-radius: 600px; border-top-left-radius: 600px;padding: 15px; color: $dark03;}
+                            .chat { max-width: 559px; border-top-right-radius: 50px; border-top-left-radius: 50px;padding: 14px 27px; @include fontMedium($dark03);}
                             .profile-img {position: relative; margin-right: 11px;  width: 40px; height: 40px; border-radius: 100%; overflow: hidden;
                                 img {@include img();}
                             }
-                            .message {display: flex;align-items: center;
+                            .message {display: flex;align-items: center; justify-content: end;
                                 .time { @include font(14px, $light01)}
                             }
                             .notice-message {@include font(14px, $dark04); text-align: right;}
-                            .card-info {position: relative; margin: 15px 0; @include border(1, $light02); padding: 15px; border-radius: 5px;
+                            .card-info {min-width: 457px; position: relative; margin: 15px 0; @include border(1, $light02); padding: 15px; border-radius: 5px;
                                 .profile-wrap { display: flex;align-items: center;}
                                 .profile-img {width: 106px; height: 93px; border-radius: 0; }
                                 > .btn {position: absolute;  right: 15px;top: 50%;transform: translate(0px, -50%);}
                             }
                         }
                     }
-              
+            }
+            .mine{
+                .inner {float: right;}
+            }
+            .other{
+                > .inner {float: left;}
             }
             .chat-input { position: fixed; bottom: 20px;   width: calc(100% - 355px);
                 a {color: $secondary; position: absolute; right: 25px;top: 50%;margin-top: -12px;}
+            }
+            .chat-result { @include clear();margin-top: 10px;
+                p{@include font(14px, $dark04); display: inline-block; margin-right: 15px;}
+                strong {color: $secondary;}
+                .btn {font-size: 14px; padding: 9px 9px;}
+                .btn-line-gray {font-size: 14px;}
+                &.blue {
+                    strong {color: $primary;}
+                    .btn-green-line {border-color: $primary;color: $primary;}
+                }
             }
         }   
     }
