@@ -8,6 +8,7 @@ html{font-size:16px;}
 }
 
 html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, button, a, select  { color:$dark01; padding:0; margin:0; line-height:1.5rem; font-size:1rem; font-weight:300;  letter-spacing: -0.2px; font-family:"ntk", 'open_sans',  'dotum', "돋움", sans-serif; word-break: break-word; -webkit-text-size-adjust:none;}
+p,a,h1, h2, h3, h4, h5, h6,a, button {transform: skew(-0.1deg);}
 ol, ul, li { list-style:none; }
 h1, h2, h3, h4, h5, h6 {font-size:100%; color:#333;}
 form, fieldset { border:0; }

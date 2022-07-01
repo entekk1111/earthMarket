@@ -9,7 +9,7 @@
 //util-group
 .util-group {
     li {display: inline-block;margin-left: 33px;
-        a {color: $dark04; font-size: 18px;padding-left: 33px;
+        a {color: $dark04; font-size: 18px;padding-left: 33px; position: relative;
             .ico {font-size: 26px;position: absolute; left: 0;top: -3px;}
             .ico-save {top: -1px;}
             strong {padding-left: 9px; color: $dark01;}
