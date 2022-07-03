@@ -1,8 +1,19 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixin";
 
+#header {margin-bottom: 0;
+    .util-wrap {
+        .link-join {margin-right: 25px;
+            li {display: none;
+                &.link-mypage {display: block;}
+            }
+        }
+        .btn {display: none;}  
+    }
+}
+#footer {display: none; }
 //chat-wrap 
-.chat-wrap {@include clear(); height: calc(100vh - 78px);
+.chat-wrap {@include clear(); height: calc(100vh - 79px);
     > * {float: left;}
     .tit-group {border-bottom: 1px solid $light02; position: relative;padding: 22px 25px;font-weight: 900;
         .chat-info {display: inline-block;}
@@ -48,7 +59,8 @@
             }
             .btn-group {position: absolute; right: 15px; top: 50%; margin-top: -25px;
                 .btn {padding: 8px 5px;}
-                .btn-line-black { margin-right: 25px; }
+                .btn-line-black { margin-right: 25px; font-weight: 600;}
+                .btn-green {font-size: 14px;}
             }
         }
         .chat-body {padding: 15px 25px; 
@@ -91,14 +103,18 @@
             .chat-input { position: fixed; bottom: 20px;   width: calc(100% - 355px);
                 a {color: $secondary; position: absolute; right: 25px;top: 50%;margin-top: -12px;}
             }
-            .chat-result { @include clear();margin-top: 10px;
-                p{@include font(14px, $dark04); display: inline-block; margin-right: 15px;}
-                strong {color: $secondary;}
-                .btn {font-size: 14px; padding: 9px 9px;}
-                .btn-line-gray {font-size: 14px;}
-                &.blue {
-                    strong {color: $primary;}
-                    .btn-green-line {border-color: $primary;color: $primary;}
+
+            .chatResult-wrap { margin-top: 32px;
+                .chat-result { @include clear();
+                    &:not(:first-child) {margin-top: 18px;}
+                    p{@include font(14px, $dark04); display: inline-block; margin-right: 15px;}
+                    strong {color: $secondary;}
+                    .btn {font-size: 14px; padding: 9px 9px;}
+                    .btn-line-gray {font-size: 14px;}
+                    &.blue {
+                        strong {color: $primary;}
+                        .btn-green-line {border-color: $primary;color: $primary;}
+                    }
                 }
             }
         }   

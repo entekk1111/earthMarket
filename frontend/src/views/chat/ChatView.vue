@@ -290,44 +290,48 @@
           </div>
           <!--  // message-group -->
 
-          <!-- chat-result -->
-          <div class="chat-result mine">
-            <div class="inner">
-              <p>상품 판매 거래를 완료했습니다.</p>
-              <a href="javascript:void(0);" class="btn-line-gray"
-                >거래 완료 취소</a
-              >
+          <!-- chatResult-wrap -->
+          <div class="chatResult-wrap">
+            <!-- chat-result -->
+            <div class="chat-result mine">
+              <div class="inner">
+                <p>상품 판매 거래를 완료했습니다.</p>
+                <a href="javascript:void(0);" class="btn-line-gray"
+                  >거래 완료 취소</a
+                >
+              </div>
             </div>
-          </div>
-          <!--  // chat-result -->
+            <!--  // chat-result -->
 
-          <!-- chat-result -->
-          <div class="chat-result mine blue">
-            <div class="inner">
-              <p>
-                판매자가 <strong>거래완료</strong>를 선택하였습니다. 구매를
-                완료하셨다면 버튼을 클릭해주세요.
-              </p>
-              <a href="javascript:void(0);" class="btn btn-green-line"
-                >거래 완료</a
-              >
+            <!-- chat-result -->
+            <div class="chat-result mine blue">
+              <div class="inner">
+                <p>
+                  판매자가 <strong>거래완료</strong>를 선택하였습니다. 구매를
+                  완료하셨다면 버튼을 클릭해주세요.
+                </p>
+                <a href="javascript:void(0);" class="btn btn-green-line"
+                  >거래 완료</a
+                >
+              </div>
             </div>
-          </div>
-          <!--  // chat-result -->
+            <!--  // chat-result -->
 
-          <!-- chat-result  -->
-          <div class="chat-result other">
-            <div class="inner">
-              <p>
-                판매자가 <strong>거래완료</strong>를 선택하였습니다. 구매를
-                완료하셨다면 버튼을 클릭해주세요.
-              </p>
-              <a href="javascript:void(0);" class="btn btn-green-line"
-                >거래 완료 취소</a
-              >
+            <!-- chat-result  -->
+            <div class="chat-result other">
+              <div class="inner">
+                <p>
+                  판매자가 <strong>거래완료</strong>를 선택하였습니다. 구매를
+                  완료하셨다면 버튼을 클릭해주세요.
+                </p>
+                <a href="javascript:void(0);" class="btn btn-green-line"
+                  >거래 완료 취소</a
+                >
+              </div>
             </div>
+            <!-- //  chat-result  -->
           </div>
-          <!-- //  chat-result  -->
+          <!--  // chatResult-wrap -->
         </div>
 
         <!-- chat-input -->
@@ -386,6 +390,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "~@/assets/scss/pages/chat";
 </style>

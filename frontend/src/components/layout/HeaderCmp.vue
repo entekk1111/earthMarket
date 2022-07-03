@@ -22,8 +22,12 @@
       <div class="util-wrap">
         <ul class="link-join">
           <!-- 로그인 전 -->
-          <li><router-link to="/join">회원가입</router-link></li>
-          <li><router-link to="/login">로그인</router-link></li>
+          <li>
+            <router-link to="/join">회원가입</router-link>
+          </li>
+          <li>
+            <router-link to="/login">로그인</router-link>
+          </li>
 
           <!-- 로그인 후 -->
           <li>
@@ -32,7 +36,7 @@
             </i>
             <router-link to="/chat"> 채팅</router-link>
           </li>
-          <li>
+          <li class="link-mypage">
             <i class="ico bg"><IconiFy icon="mi:user" /></i>
             <router-link to="/mypage/userInfo"> 시냇물졸졸</router-link>
           </li>
