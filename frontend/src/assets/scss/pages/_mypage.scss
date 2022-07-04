@@ -11,31 +11,6 @@
             }
         }
     }
-
-
-/* 파일업로드 - 게시판 */
-.file-upload {position:relative;
-    .file-upload{padding:0 15px; height:30px; line-height:30px; vertical-align:middle; color:#666;}
-    label{display: inline-block;-moz-border-radius: 3px;-webkit-border-radius: 3px;cursor: pointer;margin-right: 15px;margin-left: 2px;}
-    .file-input{position:absolute; top:0; left:0; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0);}
-    .remove {text-indent: -9999px; background: #DADADA; width: 20px;height: 20px; position: absolute; border-radius: 600px; position: relative;  vertical-align: middle;cursor: pointer;}
-    .remove:hover:after {transform: translate(-50%, -50%) rotate(360deg); transition: all 0.5s ease;}
-    .imageThumb {position: relative;top: 3px;}
-    .file-tit {margin: 0 7px;font-size: 15px;}
-    .pip {margin-right: 15px;display: inline-block;}
-}
-
- 
-
- 
- 
-
-
-
-
-
-
-
     //list-info
     .list-info { margin-top: 29px;
         > li {position: relative; border-bottom: 1px solid $light02; padding-bottom: 29px;margin-bottom: 29px;
@@ -45,9 +20,5 @@
             > a {position: absolute; right: 0; color: $primary;}
         }
     }
-
-
-
-
 
 }
