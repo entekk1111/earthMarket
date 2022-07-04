@@ -1,10 +1,13 @@
 
 .mypage-wrap {
     //tab-wrap
-    .tab-wrap {
+    .tab-wrap {margin-top: -32px;
         .tab-menu {
             .grab {
                 text-align: center;
+            }
+            .menu { @include font(16px, $dark01);font-weight: 600;
+                &.active {color: $primary;}
             }
         }
     }
