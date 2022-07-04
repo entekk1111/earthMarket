@@ -176,13 +176,3 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-#header .util-wrap,
-#header .gnb,
-#footer {
-  display: none;
-}
-.header {
-  border-bottom: 0;
-}
-</style>

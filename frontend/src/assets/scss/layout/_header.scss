@@ -46,13 +46,18 @@
 }
 
 
-// header gap
+// header gap (chat)
 .wide .util-wrap,
 .wide .gnb {display: none;}
-.wide { border-bottom: 0;margin-bottom: 0;border-bottom: 1px solid #e0e0e0;}
+.wide {margin-bottom: 0;border-bottom: 1px solid #e0e0e0;}
 .wide .grab { max-width: 100%; padding-right: 25px; padding-left: 25px;}
 @include desktop1800 {
     #container {padding-right: 15px; padding-left: 15px;}
     .wide #container {padding-right: 0px; padding-left: 0px;}
     .wide .grab {padding-right: 0; padding-left: 0;}
+}
+
+//no-header
+.no-header {
+    .header {display: none !important;}
 }

@@ -392,4 +392,27 @@ export default {
 
 <style lang="scss">
 @import "~@/assets/scss/pages/chat";
+.wide #header .gnb,
+.wide #footer {
+  display: none;
+}
+.chat-container .header {
+  margin-bottom: 0;
+  .grab {
+    .util-wrap {
+      .link-join {
+        margin-right: 25px;
+        li {
+          display: none;
+          &.link-mypage {
+            display: block;
+          }
+        }
+      }
+      .btn {
+        display: none;
+      }
+    }
+  }
+}
 </style>

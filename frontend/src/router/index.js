@@ -8,6 +8,9 @@ const routes = [
   {
     path: "/",
     name: "home",
+    meta: {
+      addClass: "main-container",
+    },
     component: () => import("../views/index/MainHome.vue"),
   },
 
@@ -36,7 +39,7 @@ const routes = [
     path: "/chat",
     name: "chat",
     meta: {
-      addClass: "wide",
+      addClass: "wide chat-container",
     },
     component: () => import("../views/chat/ChatView.vue"),
   },
@@ -46,30 +49,45 @@ const routes = [
   {
     path: "/join",
     name: "join",
+    meta: {
+      addClass: "login-container",
+    },
     component: () => import("../views/login/joinView.vue"),
   },
   //로그인
   {
     path: "/login",
     name: "login",
+    meta: {
+      addClass: "login-container no-header",
+    },
     component: () => import("../views/login/loginView.vue"),
   },
   //아이디찾기
   {
     path: "/findId",
     name: "findId",
+    meta: {
+      addClass: "login-container",
+    },
     component: () => import("../views/login/FindId.vue"),
   },
   //비밀번호찾기
   {
     path: "/findpwd",
     name: "findpwd",
+    meta: {
+      addClass: "login-container",
+    },
     component: () => import("../views/login/FindPwd.vue"),
   },
   //새 비밀번호 설정
   {
     path: "/newPwd",
     name: "newPwd",
+    meta: {
+      addClass: "login-container",
+    },
     component: () => import("../views/login/NewPwd.vue"),
   },
 

@@ -52,17 +52,3 @@ export default {
   name: "loginView",
 };
 </script>
-
-<style lang="scss">
-#header,
-#footer {
-  display: none;
-}
-.header {
-  border-bottom: 0;
-}
-.logo {
-  width: 174px;
-  height: 53px;
-}
-</style>
