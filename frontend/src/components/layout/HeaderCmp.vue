@@ -38,7 +38,7 @@
           </li>
           <li class="link-mypage">
             <i class="ico bg"><IconiFy icon="mi:user" /></i>
-            <router-link to="/mypage/userInfo"> 시냇물졸졸</router-link>
+            <router-link to="/mypage"> 시냇물졸졸</router-link>
           </li>
         </ul>
         <a href="/write" class="btn btn-blue">상품올리기</a>

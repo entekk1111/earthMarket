@@ -5,7 +5,7 @@
     input {border-radius: 600px; padding: 0 23px 0 29px;
         &::placeholder {color: $light01;}
     }
-    .btn {width: 26px; position: absolute; top: 0; right: 23px; font-size: 25px; min-width: inherit; color: $dark02;background: url('../image/board/search.png') no-repeat center;}
+    .btn {width: 26px; position: absolute; top: 50%;margin-top: -11px;right: 23px; font-size: 25px; min-width: inherit; color: $dark02;background: url('../image/board/search.png') no-repeat center;}
 }
 
 //sort-wrap 

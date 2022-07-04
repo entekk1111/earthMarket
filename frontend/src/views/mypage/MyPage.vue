@@ -16,11 +16,11 @@
 import Tab from "../../components/tab/TabContent.vue";
 import TabMenu from "../../components/tab/TabMenu.vue";
 
-import UserInfo from "../../views/mypage/pages/UserInfo.vue";
-import BuyList from "../../views/mypage/pages/BuyList.vue";
-import LikeList from "../../views/mypage/pages/LikeList.vue";
-import SellList from "../../views/mypage/pages/SellList.vue";
-import MyReview from "../../views/mypage/pages/MyReview.vue";
+import UserInfo from "../../views/mypage/comp/UserInfo.vue";
+import BuyList from "../../views/mypage/comp/BuyList.vue";
+import LikeList from "../../views/mypage/comp/LikeList.vue";
+import SellList from "../../views/mypage/comp/SellList.vue";
+import MyReview from "../../views/mypage/comp/MyReview.vue";
 
 export default {
   name: "UserInfo ",
