@@ -32,9 +32,9 @@
                     a {font-weight: 600;
                         &:hover{text-decoration: underline;}
                     }
-                    .ico.bg {width: 40px;height: 40px;background:$light04; text-align: center;border-radius: 600px;
-                        @include center_absoulte();
-                        @include inline-block-box(middle);
+                    .ico.bg {width: 40px;height: 40px;background:$light04; text-align: center;border-radius: 600px;@include inline-block-box(middle);
+                        svg {@include pos-center;}
+                        
                     }
                     .ico {margin-right: 5px; position: relative;top: -1px;}
                     .iconify  {  @include font(20px, $dark04); vertical-align: middle; }

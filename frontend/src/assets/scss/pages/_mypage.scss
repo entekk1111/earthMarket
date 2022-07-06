@@ -20,5 +20,35 @@
             > a {position: absolute; right: 0; color: $primary;}
         }
     }
+}
+
+//구매내역
+.buy-list {
+    .state {min-height: 106px; @include width-center(600px); @include box_shadow(0, 2, 13, 0.06); border-radius: 16px; @include flexbox(center); text-align: center; margin-bottom: 48px;
+        li {width: calc(100% / 2);
+            &:not(:last-child) {border-right: 1px solid #ddd;}
+            > * {font-size: 22px;}
+            strong{display: block;margin-bottom: 12px;}
+        }
+    }
+    .accordion {
+        > li:not(:first-child) {padding-top: 45px;}
+        .active {
+            .accordion-tit {
+                .iconify  {transform: rotate(180deg); }
+            }
+        }
+        .accordion-tit {display: flex;
+            .cont-tit02 {margin-right: 25px;}
+            strong {color: $secondary;}
+            .iconify {font-size: 24px;margin-left: 22px;}
+        }
+        .card-info {@include box_shadow(0, 2, 13, 0.06);
+            .dropdown {margin-left: 14px;
+                .dropdown-toggle {min-width: 50px; min-height: 50px; border: 1px solid $light03; border-radius: 8px; @include font(24px, $dark04)}
+            }
+            .btn-wrap {@include pos-center-y; right: 15px; display: flex;}
+        }
+    }
 
 }

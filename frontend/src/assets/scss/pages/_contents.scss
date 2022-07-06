@@ -91,5 +91,14 @@
 }
 
 
-
-
+//card-info
+.card-info {min-width: 457px; position: relative; margin: 15px 0; padding: 15px; border-radius: 5px;
+    .profile-wrap { display: flex;align-items: center;}
+    .profile-img {width: 106px; height: 93px; border-radius: 0; margin-right: 11px;  }
+    > .btn {position: absolute;  right: 15px;top: 50%;transform: translate(0px, -50%);}
+    .txt {
+        span {@include font(14px, $dark04);}
+        p { font-size: 18px; font-weight: 600; padding: 1px 0px 8px 0px;}
+        strong {font-size: 20px;  }
+    }
+}

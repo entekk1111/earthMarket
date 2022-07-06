@@ -70,22 +70,15 @@
                                 .time {padding-left: 15px;}
                             }
                             .chat { max-width: 559px; border-top-right-radius: 50px; border-top-left-radius: 50px;padding: 14px 27px; @include fontMedium($dark03);}
-                            .profile-img {position: relative; margin-right: 11px;  width: 40px; height: 40px; border-radius: 100%; overflow: hidden;
+                            .profile-img {position: relative; width: 40px; height: 40px; border-radius: 100%; overflow: hidden;
                                 img {@include img();}
                             }
                             .message {display: flex;align-items: center; justify-content: end;
                                 .time { @include font(14px, $light01)}
                             }
                             .notice-message {@include font(14px, $dark04); text-align: right;}
-                            .card-info {min-width: 457px; position: relative; margin: 15px 0; @include border(1, $light02); padding: 15px; border-radius: 5px;
-                                .profile-wrap { display: flex;align-items: center;}
+                            .card-info {border: 1px solid $light02; 
                                 .profile-img {width: 106px; height: 93px; border-radius: 0; }
-                                > .btn {position: absolute;  right: 15px;top: 50%;transform: translate(0px, -50%);}
-                                .txt {
-                                    span {@include font(14px, $dark04);}
-                                    p { font-size: 18px; font-weight: 600; padding: 1px 0px 8px 0px;}
-                                    strong {font-size: 20px;  }
-                                }
                             }
                         }
                     }
