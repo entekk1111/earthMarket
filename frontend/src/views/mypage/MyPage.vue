@@ -35,10 +35,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-#container {
-  padding-right: 0;
-  padding-left: 0;
-}
-</style>

@@ -10,7 +10,7 @@
       @before-leave="start"
       @after-leave="end"
     >
-      <div v-show="visible">
+      <div v-show="visible" class="accordion-box">
         <ul>
           <slot name="accordion-content"></slot>
         </ul>

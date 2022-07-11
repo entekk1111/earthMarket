@@ -22,35 +22,31 @@
         </template>
 
         <template slot="accordion-content">
-          <ul>
-            <li v-for="item in lists" :key="item">
-              <div class="card-info">
-                <div class="profile-wrap">
-                  <div class="profile-img">
-                    <img :src="item.photo" alt="" />
-                  </div>
-                  <div class="txt">
-                    <span>{{ item.nickname }}</span>
-                    <p>{{ item.title }}</p>
-                    <strong>{{ item.money }}원</strong>
-                  </div>
+          <li v-for="item in lists" :key="item">
+            <div class="card-info">
+              <div class="profile-wrap">
+                <div class="profile-img">
+                  <img :src="item.photo" alt="" />
                 </div>
-
-                <div class="btn-wrap">
-                  <a href="javascript:void(0);" class="btn btn-green"
-                    >거래완료</a
-                  >
-                  <b-dropdown class="btn-dropdown">
-                    <template #button-content>
-                      <IconiFy icon="mi:options-vertical" />
-                    </template>
-                    <b-dropdown-item>채팅방가기</b-dropdown-item>
-                    <b-dropdown-item>삭제하기</b-dropdown-item>
-                  </b-dropdown>
+                <div class="txt">
+                  <span>{{ item.nickname }}</span>
+                  <p>{{ item.title }}</p>
+                  <strong>{{ item.money }}원</strong>
                 </div>
               </div>
-            </li>
-          </ul>
+
+              <div class="btn-wrap">
+                <a href="javascript:void(0);" class="btn btn-green">거래완료</a>
+                <b-dropdown class="btn-dropdown">
+                  <template #button-content>
+                    <IconiFy icon="mi:options-vertical" />
+                  </template>
+                  <b-dropdown-item>채팅방가기</b-dropdown-item>
+                  <b-dropdown-item>삭제하기</b-dropdown-item>
+                </b-dropdown>
+              </div>
+            </div>
+          </li>
         </template>
       </Accordion>
 
@@ -112,6 +108,12 @@ export default {
   data: function () {
     return {
       lists: [
+        {
+          photo: require("../../../assets/image/board/sample01.jpg"),
+          nickname: "달콤팜",
+          title: "새콤달콤 설향딸기",
+          money: "4,200",
+        },
         {
           photo: require("../../../assets/image/board/sample01.jpg"),
           nickname: "달콤팜",

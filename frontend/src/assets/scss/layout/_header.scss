@@ -2,7 +2,7 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixin";
 
-
+#container {min-height: calc(100vh - 300px);}
 
 //logo
 .logo { width: 124px; height: 33px;background: url(../image/logo.svg) no-repeat;background-size: 100%;
