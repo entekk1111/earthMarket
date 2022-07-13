@@ -18,6 +18,8 @@ import java.util.Map;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -36,6 +38,8 @@ public class ProductController {
 	@Autowired
 	ProductService productService;
 	
+	private static final Logger log = LoggerFactory.getLogger(ProductController.class);
+
 	/**
 	 * @todo 상품목록 가져오기
 	 * @return List<ProductVO>
@@ -53,7 +57,12 @@ public class ProductController {
 	@ResponseBody
 	@GetMapping("/getProduct1stCategory")
 	public List<Map<String, Object>> getProduct1stCategory() {
-		return productService.getProduct1stCategory();
+		log.info("ProductController.getProduct1stCategory START!!");
+		
+		List<Map<String, Object>> returnList = productService.getProduct1stCategory();
+		
+		log.debug("ProductController.getProduct1stCategory END!! [{}]", returnList);
+		return returnList;
 	}
 	
 //	@ResponseBody
