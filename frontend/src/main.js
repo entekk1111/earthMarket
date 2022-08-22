@@ -2,6 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import axios from "axios";
+import store from "./store/store";
 
 //iconify
 import { Icon } from "@iconify/vue2";
@@ -23,5 +24,6 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   style,
+  store,
   render: (h) => h(App),
 }).$mount("#app");

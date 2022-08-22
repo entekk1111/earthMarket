@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.earthMarket.mapper.LoginMapper">
+
+	<select id="getMemberId" parameterType="hashmap" resultType="int">
+		select
+			count(1)
+		from
+			member_info
+			where
+			ID = #{id}
+	</select>
+	
+	<insert id="addNewMember" parameterType="hashmap">
+		INSERT INTO member_info
+			(MEMBER_CODE
+			, ID
+			, PW
+			, NAME
+			, PHONE_NUM
+			, ZIP
+			, ADDR
+			, DETAIL_ADDR
+			, NICKNAME
+			, `STATUS`
+			, AUTH_SN
+			, SERVICE_TERMS_AGREE
+			, PERSONAL_TERMS_AGREE)
+		VALUES 
+			('code'
+			, #{id}
+			, #{pw}
+			, #{name}
+			, #{phone}
+			, ''
+			, ''
+			, #{nickname}
+			, '정상'
+			, 1
+			, 'Y'
+			, 'Y')
+	</insert>
+</mapper>

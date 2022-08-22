@@ -32,6 +32,7 @@
             <input
               type="text"
               id="name_"
+              v-model="user.name"
               placeholder="이름을 입력해주세요" />
             <span class="validity">유효성검사</span>
           </li>
@@ -42,7 +43,7 @@
             <div class="input-wrap">
               <input
                 id="phoneNum"
-                v-model="initial"
+                v-model="user.phone"
                 type="text"
                 placeholder="휴대폰 번호를 입력해주세요"
                 @input="inputChanged($event)" />
@@ -94,6 +95,7 @@
             <input
               type="text"
               id="id_"
+              v-model="user.id"
               placeholder="아이디를 입력해주세요" />
             <span class="validity">오류입니다.</span>
           </li>
@@ -107,6 +109,7 @@
             <input
               type="text"
               id="pwd"
+              v-model="user.pw"
               placeholder="비밀번호를 입력해주세요" />
             <span class="validity">오류입니다.</span>
           </li>
@@ -129,6 +132,7 @@
             <input
               type="text"
               id="nickname"
+              v-model="user.nickname"
               placeholder="닉네임을 입력해주세요" />
             <span class="validity">오류입니다.</span>
           </li>
@@ -154,7 +158,8 @@
 
         <a
           href="javascript:void(0);"
-          class="btn btn-green">회원가입</a>
+          class="btn btn-green"
+          @click="joinBtn">회원가입</a>
         <p class="txt-bottom">
           이미 회원가입 하셨나요?
           <a
@@ -173,6 +178,7 @@ export default {
   data: function () {
     return {
       isDisabled: true,
+      user:{},
     };
   },
   methods: {
@@ -190,6 +196,9 @@ export default {
         this.isDisabled = true;
       }, 100);
     },
+    joinBtn(){
+      this.$store.dispatch("loginModule/joinAction", this.user)
+    }
   },
 };
 </script>
