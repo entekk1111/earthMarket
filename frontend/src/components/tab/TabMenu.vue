@@ -8,13 +8,14 @@
           v-for="(tab, index) in tabs"
           :key="index"
           :class="{ active: tab.isActive }"
-          @click="selectTab(tab)"
-        >
+          @click="selectTab(tab)">
           <span>{{ tab.name }} </span>
         </button>
-        <a href="javascript:void(0);" class="btn-link"
-          ><IconiFy class="ico" icon="bi:flag-fill" />판매자신고</a
-        >
+        <a
+          href="javascript:void(0);"
+          class="btn-link"><IconiFy
+            class="ico"
+            icon="bi:flag-fill" />판매자신고</a>
       </div>
     </div>
     <!-- // tab-menu -->

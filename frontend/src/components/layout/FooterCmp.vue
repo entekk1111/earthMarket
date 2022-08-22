@@ -1,11 +1,13 @@
 <template>
-  <footer id="footer" class="footer">
+  <footer
+    id="footer"
+    class="footer">
     <div class="grab">
       <!--  logo-gray -->
-      <a href="/" class="logo-gray">
-        <span class="sr-only"
-          >지구의 장터 지금 구매할 수 있는 장터 지구의 장터</span
-        >
+      <a
+        href="/"
+        class="logo-gray">
+        <span class="sr-only">지구의 장터 지금 구매할 수 있는 장터 지구의 장터</span>
       </a>
       <!--  // logo-gray -->
 

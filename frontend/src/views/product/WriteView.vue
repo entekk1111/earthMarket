@@ -3,13 +3,16 @@
     <form action="">
       <div>
         상품종류
-        <select name="PRODUCT_CATE" id="">
-          <option value="">상품 종류 선택</option>
+        <select
+          name="PRODUCT_CATE"
+          id="">
+          <option value="">
+            상품 종류 선택
+          </option>
           <option
             v-for="(item, index) in largeCateOptions"
             :key="index"
-            value="item.LARGE_CATE_NAME"
-          >
+            value="item.LARGE_CATE_NAME">
             {{ item.LARGE_CATE_NAME }}
           </option>
         </select>
@@ -18,8 +21,7 @@
           placeholder="상품 입력"
           name="PRODUCT_CATE_SN"
           v-model="PRODUCT_CATE_SN"
-          ref="PRODUCT_CATE_SN"
-        />
+          ref="PRODUCT_CATE_SN" />
       </div>
       <div>
         판매글 제목
@@ -28,8 +30,7 @@
           name="TITLE"
           placeholder="판매글 제목을 올려주세요."
           v-model="TITLE"
-          ref="TITLE"
-        />
+          ref="TITLE" />
       </div>
       <div>
         규격
@@ -37,27 +38,47 @@
           type="number"
           name="PER_UNIT"
           placeholder="0"
-          v-model="PER_UNIT"
-        />
-        <select name="UNIT" v-model="UNIT" id="">
-          <option value="">단위</option>
-          <option value="g">g</option>
-          <option value="kg">kg</option>
+          v-model="PER_UNIT" />
+        <select
+          name="UNIT"
+          v-model="UNIT"
+          id="">
+          <option value="">
+            단위
+          </option>
+          <option value="g">
+            g
+          </option>
+          <option value="kg">
+            kg
+          </option>
         </select>
       </div>
       <div>
-        가격 <input type="tel" name="PRICE" v-model="PRICE" placeholder="0" />원
+        가격 <input
+          type="tel"
+          name="PRICE"
+          v-model="PRICE"
+          placeholder="0" />원
       </div>
       <div>
-        판매자 주소 <button type="button">주소 가져오기</button>
-        <input type="text" name="SELLER_ADDR" v-model="SELLER_ADDR" />
-        <button type="button" @click="searchAddr()">주소 찾기</button>
+        판매자 주소 <button type="button">
+          주소 가져오기
+        </button>
+        <input
+          type="text"
+          name="SELLER_ADDR"
+          v-model="SELLER_ADDR" />
+        <button
+          type="button"
+          @click="searchAddr()">
+          주소 찾기
+        </button>
         <input
           type="text"
           name="SELLER_DETAIL_ADDR"
           placeholder="상세주소 입력"
-          v-model="SELLER_DETAIL_ADDR"
-        />
+          v-model="SELLER_DETAIL_ADDR" />
       </div>
       <div>
         상품 상세 설명<textarea
@@ -65,8 +86,7 @@
           id=""
           cols="30"
           rows="10"
-          v-model="DETAIL_DESC"
-        ></textarea>
+          v-model="DETAIL_DESC"></textarea>
       </div>
       <div>
         상품 사진 올리기
@@ -74,16 +94,30 @@
       </div>
       <div>
         거래방법
-        <input type="checkbox" v-model="DELIVER_METHOD" value="A" />
+        <input
+          type="checkbox"
+          v-model="DELIVER_METHOD"
+          value="A" />
         일반택배
-        <input type="checkbox" v-model="DELIVER_METHOD" value="B" />
+        <input
+          type="checkbox"
+          v-model="DELIVER_METHOD"
+          value="B" />
         당일배송(고속버스터미널 택배 )
-        <input type="checkbox" v-model="DELIVER_METHOD" value="C" />
+        <input
+          type="checkbox"
+          v-model="DELIVER_METHOD"
+          value="C" />
         직거래
       </div>
     </form>
-    <button type="button">취소하기</button
-    ><button type="button" @click="addProductFn">등록하기</button>
+    <button type="button">
+      취소하기
+    </button><button
+      type="button"
+      @click="addProductFn">
+      등록하기
+    </button>
   </div>
 </template>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>

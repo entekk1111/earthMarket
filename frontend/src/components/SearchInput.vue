@@ -4,10 +4,15 @@
       <span class="sr-only">상품 또는 지역 찾아보기</span>
     </label>
 
-    <input type="text" id="inputSearch" placeholder="상품 또는 지역 찾아보기" />
+    <input
+      type="text"
+      id="inputSearch"
+      placeholder="상품 또는 지역 찾아보기" />
 
     <!-- btn-->
-    <button type="button" class="btn">
+    <button
+      type="button"
+      class="btn">
       <!-- <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"

@@ -5,23 +5,31 @@
       <b-dropdown class="btn-dropdown">
         <template #button-content>
           상품 종류
-          <i class="dropdown-arr"
-            ><span class="sr-only">열림/닫힘화살표</span></i
-          >
+          <i class="dropdown-arr"><span class="sr-only">열림/닫힘화살표</span></i>
         </template>
         <b-dropdown-group
           class="chbox_wrap"
           v-for="(productItem, index) in productList"
-          :key="index"
-        >
-          <input type="checkbox" name="" v-bind:id="'input' + productItem.id" />
-          <label v-bind:for="'input' + productItem.id">
+          :key="index">
+          <input
+            type="checkbox"
+            name=""
+            :id="'input' + productItem.id" />
+          <label :for="'input' + productItem.id">
             {{ productItem.content }}
           </label>
         </b-dropdown-group>
         <b-dropdown-group class="btn-wrap">
-          <button type="button" class="btn-cancel">취소</button>
-          <button type="button" class="btn btn-green sm">확인</button>
+          <button
+            type="button"
+            class="btn-cancel">
+            취소
+          </button>
+          <button
+            type="button"
+            class="btn btn-green sm">
+            확인
+          </button>
         </b-dropdown-group>
       </b-dropdown>
     </li>
@@ -29,23 +37,31 @@
       <b-dropdown class="btn-dropdown">
         <template #button-content>
           가격
-          <i class="dropdown-arr"
-            ><span class="sr-only">열림/닫힘화살표</span></i
-          >
+          <i class="dropdown-arr"><span class="sr-only">열림/닫힘화살표</span></i>
         </template>
         <b-dropdown-group
           class="chbox_wrap"
           v-for="(priceItem, index) in priceList"
-          :key="index"
-        >
-          <input type="checkbox" name="" v-bind:id="'input' + priceItem.id" />
-          <label v-bind:for="'input' + priceItem.id">
+          :key="index">
+          <input
+            type="checkbox"
+            name=""
+            :id="'input' + priceItem.id" />
+          <label :for="'input' + priceItem.id">
             {{ priceItem.content }}원
           </label>
         </b-dropdown-group>
         <b-dropdown-group class="btn-wrap">
-          <button type="button" class="btn-cancel">취소</button>
-          <button type="button" class="btn btn-green sm">확인</button>
+          <button
+            type="button"
+            class="btn-cancel">
+            취소
+          </button>
+          <button
+            type="button"
+            class="btn btn-green sm">
+            확인
+          </button>
         </b-dropdown-group>
       </b-dropdown>
     </li>
@@ -53,23 +69,31 @@
       <b-dropdown class="btn-dropdown">
         <template #button-content>
           지역
-          <i class="dropdown-arr"
-            ><span class="sr-only">열림/닫힘화살표</span></i
-          >
+          <i class="dropdown-arr"><span class="sr-only">열림/닫힘화살표</span></i>
         </template>
         <b-dropdown-group
           class="chbox_wrap"
           v-for="(regionItem, index) in regionList"
-          :key="index"
-        >
-          <input type="checkbox" name="" v-bind:id="'input' + regionItem.id" />
-          <label v-bind:for="'input' + regionItem.id">
+          :key="index">
+          <input
+            type="checkbox"
+            name=""
+            :id="'input' + regionItem.id" />
+          <label :for="'input' + regionItem.id">
             {{ regionItem.content }}
           </label>
         </b-dropdown-group>
         <b-dropdown-group class="btn-wrap">
-          <button type="button" class="btn-cancel">취소</button>
-          <button type="button" class="btn btn-green sm">확인</button>
+          <button
+            type="button"
+            class="btn-cancel">
+            취소
+          </button>
+          <button
+            type="button"
+            class="btn btn-green sm">
+            확인
+          </button>
         </b-dropdown-group>
       </b-dropdown>
     </li>
@@ -77,23 +101,31 @@
       <b-dropdown class="btn-dropdown">
         <template #button-content>
           거래방법
-          <i class="dropdown-arr"
-            ><span class="sr-only">열림/닫힘화살표</span></i
-          >
+          <i class="dropdown-arr"><span class="sr-only">열림/닫힘화살표</span></i>
         </template>
         <b-dropdown-group
           class="chbox_wrap"
           v-for="(methodlItem, index) in methodList"
-          :key="index"
-        >
-          <input type="checkbox" name="" v-bind:id="'input' + methodlItem.id" />
-          <label v-bind:for="'input' + methodlItem.id">
+          :key="index">
+          <input
+            type="checkbox"
+            name=""
+            :id="'input' + methodlItem.id" />
+          <label :for="'input' + methodlItem.id">
             {{ methodlItem.content }}
           </label>
         </b-dropdown-group>
         <b-dropdown-group class="btn-wrap">
-          <button type="button" class="btn-cancel">취소</button>
-          <button type="button" class="btn btn-green sm">확인</button>
+          <button
+            type="button"
+            class="btn-cancel">
+            취소
+          </button>
+          <button
+            type="button"
+            class="btn btn-green sm">
+            확인
+          </button>
         </b-dropdown-group>
       </b-dropdown>
     </li>

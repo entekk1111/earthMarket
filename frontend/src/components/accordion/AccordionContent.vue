@@ -1,6 +1,8 @@
 <template>
   <li>
-    <div :class="{ active: visible }" @click="open">
+    <div
+      :class="{ active: visible }"
+      @click="open">
       <slot name="accordion-trigger"></slot>
     </div>
     <transition
@@ -8,9 +10,10 @@
       @enter="start"
       @after-enter="end"
       @before-leave="start"
-      @after-leave="end"
-    >
-      <div v-show="visible" class="accordion-box">
+      @after-leave="end">
+      <div
+        v-show="visible"
+        class="accordion-box">
         <ul>
           <slot name="accordion-content"></slot>
         </ul>

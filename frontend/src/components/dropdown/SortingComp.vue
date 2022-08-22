@@ -8,8 +8,7 @@
       <b-dropdown-item
         class=""
         v-for="(productItem, index) in productList"
-        :key="index"
-      >
+        :key="index">
         {{ productItem.content }}
       </b-dropdown-item>
     </b-dropdown>

@@ -1,13 +1,24 @@
 <template>
   <div class="mypage-wrap">
     <TabMenu>
-      <Tab name="회원정보" selected="true" class="user-info">
+      <Tab
+        name="회원정보"
+        selected="true"
+        class="user-info">
         <UserInfo />
       </Tab>
-      <Tab name="구매내역"> <BuyList /> </Tab>
-      <Tab name="판매내역"> <SellList /> </Tab>
-      <Tab name="관심목록"> <LikeList /> </Tab>
-      <Tab name="나의 리뷰"> <MyReview /> </Tab>
+      <Tab name="구매내역">
+        <BuyList />
+      </Tab>
+      <Tab name="판매내역">
+        <SellList />
+      </Tab>
+      <Tab name="관심목록">
+        <LikeList />
+      </Tab>
+      <Tab name="나의 리뷰">
+        <MyReview />
+      </Tab>
     </TabMenu>
   </div>
 </template>

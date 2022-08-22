@@ -13,20 +13,26 @@
 
     <AccordionMenu>
       <Accordion>
-        <template slot="accordion-trigger">
+        <template #accordion-trigger>
           <div class="accordion-tit">
-            <h3 class="cont-tit02">거래중인 목록</h3>
+            <h3 class="cont-tit02">
+              거래중인 목록
+            </h3>
             <strong>3개상품</strong>
             <IconiFy icon="mi:chevron-down" />
           </div>
         </template>
 
-        <template slot="accordion-content">
-          <li v-for="item in lists" :key="item">
+        <template #accordion-content>
+          <li
+            v-for="item in lists"
+            :key="item">
             <div class="card-info">
               <div class="profile-wrap">
                 <div class="profile-img">
-                  <img :src="item.photo" alt="" />
+                  <img
+                    :src="item.photo"
+                    alt="" />
                 </div>
                 <div class="txt">
                   <span>{{ item.nickname }}</span>
@@ -36,7 +42,9 @@
               </div>
 
               <div class="btn-wrap">
-                <a href="javascript:void(0);" class="btn btn-green">거래완료</a>
+                <a
+                  href="javascript:void(0);"
+                  class="btn btn-green">거래완료</a>
                 <b-dropdown class="btn-dropdown">
                   <template #button-content>
                     <IconiFy icon="mi:options-vertical" />
@@ -51,21 +59,29 @@
       </Accordion>
 
       <Accordion>
-        <template slot="accordion-trigger">
+        <template #accordion-trigger>
           <div class="accordion-tit">
-            <h3 class="cont-tit02">구매완료 목록</h3>
+            <h3 class="cont-tit02">
+              구매완료 목록
+            </h3>
             <strong>3개상품</strong>
-            <IconiFy icon="mi:chevron-down" class="ico" />
+            <IconiFy
+              icon="mi:chevron-down"
+              class="ico" />
           </div>
         </template>
 
-        <template slot="accordion-content">
+        <template #accordion-content>
           <ul>
-            <li v-for="item in lists" :key="item">
+            <li
+              v-for="item in lists"
+              :key="item">
               <div class="card-info">
                 <div class="profile-wrap">
                   <div class="profile-img">
-                    <img :src="item.photo" alt="" />
+                    <img
+                      :src="item.photo"
+                      alt="" />
                   </div>
                   <div class="txt">
                     <span>{{ item.nickname }}</span>
@@ -75,12 +91,14 @@
                 </div>
 
                 <div class="btn-wrap">
-                  <a href="javascript:void(0);" class="btn btn-green"
-                    >거래완료</a
-                  >
+                  <a
+                    href="javascript:void(0);"
+                    class="btn btn-green">거래완료</a>
                   <b-dropdown class="btn-dropdown">
                     <template #button-content>
-                      <IconiFy icon="mi:options-vertical" class="ico" />
+                      <IconiFy
+                        icon="mi:options-vertical"
+                        class="ico" />
                     </template>
                     <b-dropdown-item>채팅방가기</b-dropdown-item>
                     <b-dropdown-item>삭제하기</b-dropdown-item>

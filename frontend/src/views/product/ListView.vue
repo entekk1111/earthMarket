@@ -4,7 +4,9 @@
     <div class="contentList-wrap">
       <!-- top-wrap -->
       <div class="top-wrap">
-        <h2 class="cont-tit">상품 모아보기</h2>
+        <h2 class="cont-tit">
+          상품 모아보기
+        </h2>
         <SearchInput />
       </div>
       <!-- // top-wrap -->
@@ -16,7 +18,10 @@
         <div class="toggle-button-wrap">
           <label for="toggleBtn">내 근처 상품탐색</label>
           <div class="toggle-button">
-            <input type="checkbox" id="toggleBtn" class="checkbox" />
+            <input
+              type="checkbox"
+              id="toggleBtn"
+              class="checkbox" />
             <div class="knobs"></div>
             <div class="layer"></div>
           </div>
@@ -32,17 +37,20 @@
           <SortingComp />
         </div>
         <ul class="contentList">
-          <li v-for="(productItem, index) in productlist" :key="index">
+          <li
+            v-for="(productItem, index) in productlist"
+            :key="index">
             <button
               type="button"
               class="btn-like"
-              @click="setActiveItemId(index)"
-            >
+              @click="setActiveItemId(index)">
               <i class="ico"><span class="sr-only">좋아요</span></i>
             </button>
             <a href="/list/detail?productCode=0">
               <div class="img-wrap">
-                <img :src="productItem.photo" alt="" />
+                <img
+                  :src="productItem.photo"
+                  alt="" />
               </div>
               <div class="txt-wrap">
                 <span class="tag">{{ productItem.tag }}</span>
@@ -58,7 +66,9 @@
       <!-- bottom-wrap -->
       <div class="bottom-wrap">
         <Pagination />
-        <p class="page-result">총 1045 중 20 상품</p>
+        <p class="page-result">
+          총 1045 중 20 상품
+        </p>
       </div>
       <!--  // bottom-wrap -->
     </div>

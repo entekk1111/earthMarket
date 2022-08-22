@@ -1,6 +1,8 @@
 <template>
   <section>
-    <h2 class="sr-only">메인비주얼</h2>
+    <h2 class="sr-only">
+      메인비주얼
+    </h2>
     <div class="mVisual">
       <div class="grab">
         <div class="txt-wrap">

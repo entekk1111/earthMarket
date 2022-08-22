@@ -1,7 +1,11 @@
 <template>
-  <div id="app" :class="$route.meta.addClass">
+  <div
+    id="app"
+    :class="$route.meta.addClass">
     <Header />
-    <div id="container" class="container">
+    <div
+      id="container"
+      class="container">
       <router-view />
     </div>
     <Footer />

@@ -1,10 +1,16 @@
 <template>
   <div>
     <!-- pagination -->
-    <b-pagination v-model="currentPage" :total-rows="rows">
+    <b-pagination
+      v-model="currentPage"
+      :total-rows="rows">
       <!-- <template #first-text><span class="sr-only">First</span></template> -->
-      <template #prev-text><IconiFy icon="fa6-solid:angle-left" /></template>
-      <template #next-text><IconiFy icon="fa:angle-right" /></template>
+      <template #prev-text>
+        <IconiFy icon="fa6-solid:angle-left" />
+      </template>
+      <template #next-text>
+        <IconiFy icon="fa:angle-right" />
+      </template>
       <!-- <template #last-text><span class="sr-only">Last</span></template> -->
       <template #page="{ page, active }">
         <b v-if="active">{{ page }}</b>

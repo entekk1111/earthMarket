@@ -5,11 +5,15 @@
       <ul class="breadcrumbs">
         <li>
           <a href="javscript:void(0);">상품목록 </a>
-          <IconiFy icon="fa6-solid:angle-right" class="arr" />
+          <IconiFy
+            icon="fa6-solid:angle-right"
+            class="arr" />
         </li>
         <li>
           <a href="javscript:void(0);">과일류 </a>
-          <IconiFy icon="fa6-solid:angle-right" class="arr" />
+          <IconiFy
+            icon="fa6-solid:angle-right"
+            class="arr" />
         </li>
         <li><a href="javscript:void(0);">딸기 </a></li>
       </ul>
@@ -17,18 +21,24 @@
 
       <!-- tit-wrap -->
       <div class="tit-wrap">
-        <h2 class="cont-tit-normal">새콤달콤 설향딸기</h2>
+        <h2 class="cont-tit-normal">
+          새콤달콤 설향딸기
+        </h2>
 
         <!-- util-group -->
         <ul class="util-group">
           <li>
             <a href="javascript:void(0);">
-              <IconiFy icon="mi:share" class="ico" />공유하기
+              <IconiFy
+                icon="mi:share"
+                class="ico" />공유하기
             </a>
           </li>
           <li>
             <a href="javascript:void(0);">
-              <IconiFy icon="bx:heart" class="ico ico-save" />저장
+              <IconiFy
+                icon="bx:heart"
+                class="ico ico-save" />저장
               <strong>40</strong>
             </a>
           </li>
@@ -38,12 +48,9 @@
         <!-- info-group  -->
         <ul class="info-group">
           <li>
-            상품 평점<strong
-              ><IconiFy
-                icon="ant-design:star-filled"
-                class="ico-star"
-              />4.7</strong
-            >
+            상품 평점<strong><IconiFy
+              icon="ant-design:star-filled"
+              class="ico-star" />4.7</strong>
           </li>
           <li>조회<strong>420</strong></li>
           <li>2022.03.17. 6:20</li>
@@ -59,10 +66,15 @@
             ref="slider-big"
             v-bind="slickOptions"
             @beforeChange="syncSliders"
-            class="slider slider-for"
-          >
-            <div v-for="(d, index) in data1" :key="index">
-              <div class="item"><img :src="d.image" alt="" /></div>
+            class="slider slider-for">
+            <div
+              v-for="(d, index) in data1"
+              :key="index">
+              <div class="item">
+                <img
+                  :src="d.image"
+                  alt="" />
+              </div>
             </div>
           </vueSlickCarousel>
 
@@ -70,12 +82,17 @@
             :class="'slider-thumb'"
             ref="slider-thumb"
             v-bind="slickNavOptions"
-            :focusOnSelect="true"
+            :focus-on-select="true"
             @beforeChange="syncSliders"
-            class="slider-nav"
-          >
-            <div v-for="(d, index) in data1" :key="index">
-              <div class="item"><img :src="d.image" alt="" /></div>
+            class="slider-nav">
+            <div
+              v-for="(d, index) in data1"
+              :key="index">
+              <div class="item">
+                <img
+                  :src="d.image"
+                  alt="" />
+              </div>
             </div>
           </vueSlickCarousel>
         </div>
@@ -85,14 +102,11 @@
           <strong class="money">18,000원</strong>
           <ul class="info-list">
             <li>
-              <span>판매자</span
-              ><strong
-                >달콤팜
-                <i class="star-wrap"
-                  ><IconiFy icon="ant-design:star-filled" class="ico-star" />
-                  4.7</i
-                ></strong
-              >
+              <span>판매자</span><strong>달콤팜
+                <i class="star-wrap"><IconiFy
+                  icon="ant-design:star-filled"
+                  class="ico-star" />
+                  4.7</i></strong>
             </li>
             <li><span>규격</span><strong>4kg</strong></li>
             <li><span>카테고리</span><strong>농산물 / 과일</strong></li>
@@ -105,7 +119,9 @@
               </ul>
             </li>
           </ul>
-          <a href="/chat " class="btn btn-green">판매자 채팅</a>
+          <a
+            href="/chat "
+            class="btn btn-green">판매자 채팅</a>
         </div>
         <!--  //info-group  -->
       </div>
@@ -115,7 +131,9 @@
     <!--  bottom-wrap -->
     <div class="bottom-wrap">
       <TabMenu>
-        <Tab name="상품정보" selected="true">
+        <Tab
+          name="상품정보"
+          selected="true">
           <p>
             안녕하세요. 예리농장 예리아빠입니다~ 오늘은 물량이 부족해 15박스밖에
             발송을 못했습니다. 그래서 내일은 조금 더 적게 주문받겠습니다~ 수요일
@@ -134,7 +152,11 @@
           </p>
         </Tab>
 
-        <Tab name="상품리뷰" total="56"> ssdfsdfsdf </Tab>
+        <Tab
+          name="상품리뷰"
+          total="56">
+          ssdfsdfsdf
+        </Tab>
       </TabMenu>
     </div>
     <!-- // bottom-wrap -->
@@ -150,7 +172,7 @@ import Tab from "../../components/tab/TabContent.vue";
 import TabMenu from "../../components/tab/TabMenu.vue";
 
 export default {
-  name: "productDetail",
+  name: "ProductDetail",
   components: { vueSlickCarousel, Tab, TabMenu },
   data: function () {
     return {
